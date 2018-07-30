@@ -1,0 +1,994 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Ap is sabaq mein ye sekhen gay</title>
+  <script src="./../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="./../elements/codelab.html">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <style is="custom-style">
+    body {
+      font-family: "Roboto",sans-serif;
+      background: var(--google-codelab-background, #F8F9FA);
+    }
+  </style>
+  
+</head>
+<body unresolved class="fullbleed">
+
+  <google-codelab title="Ap is sabaq mein ye sekhen gay"
+                  environment="web"
+                  feedback-link="pending">
+    
+      <google-codelab-step label="Khush Amdeed!" duration="0">
+        <p><img style="max-width: 624.00px" src="img\b8704043757fc164.png"></p>
+<p>Is codelab, mai aap sikhaingai ke aap kis tarha apni pehli Android application Kotlin ke saath bana sakte hai aur chala sakte hai, agar aap yaha per aayain hai is codelab ke Java version ke liyai tou aap is <a href="https://codelabs.developers.google.com/codelabs/build-your-first-android-app/#0" target="_blank">link</a> per click kar sakte hai aur is codelab k English version k liyai is <a href="https://codelabs.developers.google.com/codelabs/build-your-first-android-app-kotlin/index.html?index=..%2F..%2Findex#0" target="_blank">link</a> per click kar sakte hai. <a href="https://kotlinlang.org" target="_blank">Kotlin</a> ek statically typed programming language hai jou <strong>JVM </strong>(Java Virtual Machine) per he chalti hai aur wou Java k saath puri tarha sai <strong>Interoperable</strong> (Interoperable say murad ye hai k kotlin mien likha gaya code Java mien chal sakta hai aur Java mien likha code Koltin mein) hai. Kotlin Android applications develop karnai k liyai officially supported language hai, Java ke saath saath.</p>
+<h2><strong>Aap kiya sekhnay lagai hai</strong></h2>
+<ul>
+<li>Android Studio kou kese use karte hai.</li>
+<li>Emulator aur apni device per application kou kese chalate hai.</li>
+<li>application mai buttons kese add karte hai.</li>
+<li>Dusri Screen kese dikhate hai.</li>
+</ul>
+<h2><strong>Aap kou pehlay sai kiya pata houna chaheyai</strong></h2>
+<p>Yai codelab likha gaya hai programmers k liyai aur farz karta hai k aap kou Java yaa Kotlin k bare mai maloom hai. Agar aap tajurba-kaar programmer hai aur code kou parhnay mai mahir hai, yaha tk k agar aap kou ziyada maharat nahi tou yai imkaan hai k aap is kabil hou jayaingai is codelab mai aagai barh ke</p>
+<h2><strong>Android applications likhnai ke liyai Kotlin aur Android Studio kaa Istamal karen</strong></h2>
+<p>Aap Android applications likhte hai Kotlin yaa Java mai <strong>Android Studio IDE </strong>(Integrated Development Environment) kou istehmaal karte huai. Jis ki bunyad JetBrains Company ka ek software IntelliJ IDEA hai, Android Studio IDE banaya gaya hai khususi taur per Android Development k liyai. Kotlin k saath applicationlication banane k liyai hum aap kou salah dete hai k aap Android Studio ka kam-az-kam version jou ke hai <strong>3.0.0</strong> yaa is sai baad kaa koi bhi version istemal karen.</p>
+<p>Is codelab k saath kaam karnai k liyai, aap kou zarurat perigee ek aaisai Computer ki jou Android Studio kou chalanai k kabil hou (yaa tou is mai pehlay sai Android Studio mojood hou).</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Android Studio Install karnai kaa tareeqa" duration="0">
+        <p>Aap Android Studio kaa istehmaal karengai. Jis ki bunyad JetBrains Company ka ek software IntelliJ IDEA hai, Android Studio IDE banaya gaya hai khususi taur per Android Development ke liyai.</p>
+<p>Android Studio tamam <strong>OS </strong>(Operating Systems) ke liyai dastiyab hai, chahe wou Windows, Mac aur Linux systems hon. Isai install karne kaa tareeqa sab systems mai taqreeban same hai. Kuch farq nichai section mai note kiyai gayai hai.</p>
+<aside class="special"><p><strong>Note</strong>: Android Studio musalsal behter houta jaa raha hai. Tou is ki taza tareen system k zaruriyaat or isai intall karnai ki saari hidayaat, kaa hawala is documentation sai mil jaye gaa <a href="https://developer.android.com/studio/index.html" target="_blank">developer.Android.com/studio</a>.</p>
+<p>Kotlin ki support <strong>Android Studio</strong> mai pehlay sai shamil hai is ke version <strong>3.0.0 </strong>ya is sai agai ke, tou hum salah dete hai ke aap in mai sai koi ek version kaa istehmaal karen apni Development ke Liyai</p>
+</aside>
+<p>Agar jou computer aap istemal kar rahe hain us mai Android Studio pehlay sai mojood hai, to aap kaam ki taraf jaa sakte hai, Apna pehla project banayain.</p>
+<p>Nahi agar tou sab sai pehlay aap yai check karen k aap k paas sahi Java version mojood hou (jou Android Studio ki lazmi zarurat hai) aur phir Android Studio install karen.</p>
+<h2>Aap kiya sekhnay lagai hai</h2>
+<ul>
+<li>Android Studio kaisai install karte hai</li>
+</ul>
+<p><strong>Java Install karen agar zarurat hou</strong></p>
+<p>Aagai barhnai ke liyai aur Android Studio kou chalanai k liyai, aap kou zarurat hou sakti hai JDK (Java Development Kit) Java 7 yaa is sai agai k version ki.</p>
+<aside class="special"><p><strong>Zaruri Baat</strong>: Meherbani farma kar Android Studio install naa karai jab tk aap k paas Java JDK install naa hou. Bina is k aap kaa sara install process kaam nahi karaigaa.</p>
+</aside>
+<p><strong>Java Development Kit install karen</strong></p>
+<ol type="1" start="1">
+<li>Apnai Computer mai , terminal window kou chalain</li>
+<li>Command mai type karen <code>java -version</code></li>
+</ol>
+<p>Jou output degaa aap kou :</p>
+<p><code>Java(™) SE Runtime Environment (build 1.X.0_05-b13)</code></p>
+<p><em><code>X</code></em> agar version kuch is tarha sai hai</p>
+<ul>
+<li>Agar version 7 ya us sai aagai kaa hai tou aap Android Studio k process mai aagai barh sakte</li>
+<li>Agar version 7 sai km hai yaa Java install nahi hai. Tou aap kou chaheyai ke Java JDK ka naya version install karen Android Studio sai pehlay.</li>
+</ul>
+<aside class="special"><p><strong>Note:</strong> Aap kou hou sakta hai ke <code>java</code> command tarteeb denai ki zarurat hou kisi bhi kisam ki Java command kou chalanai yaa is sai kisi bhi natijay tk pohanch nai ke liyai jou <code>java -version</code> sai aayai. Aap yai type kar sakte hai.</p>
+<p><code>where is java</code></p>
+<p>Terminal mai jaa kar yai dekhnai k liyai k java kaha installed hai.</p>
+</aside>
+<p>Java Standard Development Kit (JDK) download karne k liyai:</p>
+<ol type="1" start="1">
+<li>Is link per Jayen <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Oracle Java SE Downloads</a>.</li>
+<li>Java SE Downloads icon per click karen aur<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java SE Development Kit 8 Downloads</a> ke page kou kholen</li>
+<li>Nayee Java SE Development Kit ke box ke ander, License Agreement kou accept karen. Phir apne computer ke hisaab se sahi version kaa intekhaab karen.</li>
+</ol>
+<aside class="special"><p><strong>Zaruri Baat</strong>: Demos aur Samples ki taraf naa jayain (menu taqreeban ek jaisaa hai, tou is baat kaa khayal rakhain k aap upper darj Heading kou sahi sai parhain).</p>
+</aside>
+<ol type="1" start="4">
+<li>Development kit install karen, yai ziyada waqt nahi lega.</li>
+<li>Jab installation ikhtetaam per pohanch jayai, terminal window kholen aur yai command type karen phir se <code>java -version</code> tazdeeq karnai ke liyai ke aap ki installation kamyab hui yaa nahi.</li>
+<li>JAVA_HOME environment variable kou set karen apni JDK ki installation directory mai (neechai di gayee machine ki makhsoos hidayat per amal karen)</li>
+</ol>
+<p><strong>JAVA_HOME </strong></p>
+<p><strong>Windows:</strong></p>
+<p>JAVA_HOME kou installation location per set karen</p>
+<ol type="1" start="1">
+<li>Start &gt; Control Panel &gt; System &gt; Advanced System Setting &gt; Environment Variables &gt; New</li>
+</ol>
+<ul>
+<li>Variable name: JAVA_HOME        </li>
+<li>Variable value: C:\Program Files\Java\jdk1.7.0_80 (yaa jou bhi version hai aap k installation kaa!)</li>
+</ul>
+<ol type="1" start="2">
+<li>Agar variable pehlay sai mojood hou tou apnai mojooda version k hisaab sai update karen.</li>
+</ol>
+<p>Tazdeeq karlen JAVA_HOME variable kou cmd.exe terminal sai: <code>echo %JAVA_HOME%</code>.</p>
+<p>Mazeed maloomat k liyai, dekhain yai link  <a href="https://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/" target="_blank">Installing the JDK Software and Setting JAVA_HOME</a>.</p>
+<p><strong>Mac:</strong></p>
+<p>JAVA_HOME kou installation location per set karen</p>
+<ol type="1" start="1">
+<li>Terminal  kholen</li>
+<li>Apani home directory tk jayain cd command use karte huai</li>
+<li>Yai file kholen <code>~/.bash_profile</code> jo aap ke terminal ki configuration file hai</li>
+<li>Darj zail command ka istemal karte huai:<br><code>export JAVA_HOME=$(/usr/libexec/java_home)</code></li>
+<li>Configuration file kou dubara load karen is command ka istemal karte huai:<br><code>source ~/.bash_profile</code></li>
+<li>Yai command istemal karen <code>echo $JAVA_HOME</code> location ki tazdeeq k liyai.</li>
+</ol>
+<p><strong>Linux:</strong></p>
+<p>JAVA_HOME kou installation location per set karen</p>
+<p>Dekhen  <a href="https://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/" target="_blank">Installing the JDK Software and Setting JAVA_HOME</a>.</p>
+<aside class="special"><p><strong>koi masla aajayai tou</strong>: Agar koi screen nazar naa aayai, control panel ya startup icon JDK ke hawale sai, tazdeeq karen ke aap nai JDK sahi tareeqai sai install karliya apni intallation directory tk jaa kar. Apnai JDK ki shanakht k liyai, apnii PATH variable kou dekhain yaa apnai computer mai search karen <code>jdk</code> ki directory yaa <code>java</code> or <code>javac</code> executables.</p>
+</aside>
+<p><strong>Android Studio Install karen</strong></p>
+<ol type="1" start="1">
+<li>Is link per click karen <a href="https://developer.android.com/studio/" target="_blank">Android Studio download page</a><strong> </strong>aur download karen naya or jadeed version Android Studio ka. <strong>Android Studio 3.0.0 yaa is sai agai ke version Kotlin support karte hai. </strong>Aap hidayat mer amal kar sakte hain <a href="https://developer.android.com/studio/install.html" target="_blank">install Android Studio</a>.</li>
+</ol>
+<ul>
+<li>Her step per default configuration he accept karen</li>
+<li>Dihaan rakhain installation ke saarai option kaa intekhaab karen</li>
+</ul>
+<ol type="1" start="2">
+<li>Installation khatam houne ke baad, ek setup screen numaya hougi jou kuch izafi cheezain dowload aur install karaigee. Is process mai thora sabar se kaam len kyun ke hou sakta hai yai process thori ziyada dair lagayai aap ke internet connection ke bina per, aur kuch process aisai hou sakte jou gair zaruri hou.</li>
+<li>Jab downloading puri hou jayai gee, Android Studio shuru houga, aur aap tayar hai apna pehla project bananai k liyai.</li>
+</ol>
+<aside class="special"><p><strong>koi masla aajayai tou</strong>: Agar koi masla aajayai installation k waqt, tou aap darj zail documentation kou dekh sakte hai aur programming forums.</p>
+</aside>
+<p><strong>Android Studio ki installation ke barai mai kuch or Hidayaat</strong></p>
+<ul>
+<li><a href="http://developer.android.com/sdk/index.html" target="_blank">Android Studio download page</a></li>
+<li><a href="https://java.com/en/download/help/download_options.xml" target="_blank">How do I install Java?</a></li>
+<li><a href="http://developer.android.com/tools/studio/index.html" target="_blank">Android Studio documentation</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Apna pehla project banayain" duration="0">
+        <p>Is Step mai, aap ek project bananai lagai hain apni pehli application ke liyai. Yai ek simple application hai jou deikha rahi hai ek String &#34;Khush Amdeed&#34; apni screen per Android emulator yaa Android device per.</p>
+<p>Kuch is tarha sai aap ki application nazar aayaigee:</p>
+<p><img style="max-width: 275.49px" src="img\5ae888411e01f52c.png"></p>
+<h2>Aap kiya sekhnay lagai hai</h2>
+<ul>
+<li>Android Studio mai project kis tarha banate hai.</li>
+<li>Android emulator kis tarha banate hai.</li>
+<li>Apni application kou emulator mai kis tarha chalate hai.</li>
+<li>Apni application kou Android phone mai kis tarha chalate hai, agar aap ke paas phone hou.</li>
+</ul>
+<h2><strong>Naya project banayain </strong></h2>
+<ol type="1" start="1">
+<li>Android Studio shuru karian.</li>
+<li><strong>Welcome to Android Studio</strong> ke dialog mai, click karen <strong>Start a new Android Studio project</strong>.</li>
+<li><strong>New Project</strong> ke dialog mai, apni application kaa naam rakhen jese ke <strong>Mairee Pehli App</strong>.</li>
+<li>Default example domain kou accept karen.</li>
+<li><strong>Include Kotlin support</strong> ke Check box kou check mark karen.<br><br><img style="max-width: 432.00px" src="img\cbebec9575b2f2db.png"><br></li>
+<li>Default project location kou accept kar ke agai barai , <strong>Next</strong> click karen.</li>
+<li>Target Android Devices ke dialog mai, default accept kar ke agai barai , <strong>Next</strong> click karen.</li>
+<li>Empty Activity kou select kar ke, <strong>Next</strong> click karen.</li>
+<li><strong>Customize the Activity</strong> ke dialog mai, default accept karen.</li>
+<li><strong>Finish</strong> ke button per click karen.</li>
+</ol>
+<p>In sab ke baad, Android Studio:</p>
+<ul>
+<li>Ek folder banata hai aap ke Android Studio project ke liyai. Aam taur per is folder kaa naam houta hai <strong>AndroidStudioProjects</strong>.</li>
+<li>Aap ka project build houta hai. (is process mai hou sakta hai thora waqt lagai). Android Studio Gardle kou use karta hai apnai Build System ke liyai.</li>
+<li>Apnai code editior kou kholen jou aap ke project mai dikh raha hai.</li>
+</ul>
+<p>Android Studio ki window kuch is tarha hougi jaise is Image mai hai:</p>
+<p><img style="max-width: 624.05px" src="img\5a33d0e34a647da9.png"></p>
+<h2><strong>Project structure aur layout kou talash karen</strong></h2>
+<p>Aap dekh sakte hai apnai project ke structure kou jou ke <strong>hierarchy</strong> files ke form mai hai bohot sare tareeqo se.</p>
+<ol type="1" start="1">
+<li><strong>app (1) </strong>folder per click karen, or kholen hierarchy files. (Dekhen 1 screenshot mai.)</li>
+<li><strong>Project (2)</strong> per click karen. Housakta hai aap kou yai option dekhnai ke liyai is option tk jana pare <strong>View &gt; Tool Buttons</strong>.</li>
+<li>Abhi pehlai sai <strong>muntakhib</strong> kiya gaya project view hai &gt; Android. <strong>Android (3) </strong>is per click karen or dusre dastiyab project views talash karen.</li>
+</ol>
+<p>Project &gt; Android view mai aap dekhen gai teen uppri satha ke folders apne <strong>app</strong> folder ke nichai: <strong>manifest</strong>,<strong> java</strong>, aur <strong>res</strong>.</p>
+<ol type="1" start="1">
+<li><strong>manifests</strong> ke folder kou kholen.<br><br>Is folder mai mojood ek file hai <strong>AndroidManifest.xml</strong>. Aur yai hai wou file jou bayan karti hai aap ke Android application ke saarai ajzah kou aur yai file Android system read karta hai, jab aap ki application execute houti hai.</li>
+<li><strong>java</strong> ke folder kou kholen. Aap ki tamam Kotlin aur Java files is folder mai tarteeb di gayee hai. Yai <strong>java</strong> folder apnai ander bhi kul teen subfolders rakhta hai.<br><br><strong>com.codelab.maireepehliapp</strong> (yaa jou bhi domain kaa naam aap nai makhsoos kara hou): Yai hai wou folder jaha per aap ki application se mutalliq tamam Kotlin aur Java ki source code files mushtamil hai.<br><br><strong>com.codelab.maireepehliapp (AndroidTest)</strong>: Yai hai wou folder jaha aap apni  instrumented test files rakhte hai. Yaha per pehlai sai he ek sample file mojood hougi.<br><strong>com.codelab.maireepehliapp (test)</strong>: Yai hai wou folder jaha aap apni unit test files rakhte hai. Yaha per pehlai sai he ek sample file mojood hougi.</li>
+<li><strong>res</strong> ke folder kou kholen. Is folder mai aap ki application ke liyai saarai wasayeel mojood hai <strong>(resources)</strong> jaisai ke , bashmool images, layout ki files, strings, icons, aur styling ki files. Is sai mutalliq saarai subfolders is mai shamil hai.<br><br><strong>drawable</strong>: Aap ki tamam images yaha is folder mai rakhi jayaingi.<br><br><strong>layout</strong>: Is folder mai aap ki tamam layouts ki file rakhi jayaingi. Is waqt aap ke application mai ek activity file hai jis ki ek layout file jis ka naam activity_main.xml hai.<br><br><strong>mipmap</strong>: Is folder mai aap ki application ke launcher icons ki files rakhi jayaingi.<br><br><strong>values</strong>: Apnai ander rakhta hai tamam wasayeel, jaisai ke strings, colors, jou aap apni application mai istemal karte hai.</li>
+</ol>
+<p><strong>Banayain ek masnooye(virtual) device (Emulator)<br><br></strong>Is kaam mai, aap use karengai <a href="http://developer.android.com/tools/devices/managing-avds.html" target="_blank">Android Virtual Device (AVD) manager</a> apni masnooye device bananai ke liyai (jisai emulator bhi kehtai hai) jou aap kou ek masnooye Android device kou tarteeb deti hai aur isai istemal ke kablil banati hai.</p>
+<p>Is device kou bananai ka pehlaa step hai ke is device ke hardware configuration kou tarteeb dena.</p>
+<ol type="1" start="1">
+<li>Android Studio mai, jayain <strong>Tools &gt; Android &gt; AVD</strong> Manager, yaa click karen AVD Manager icon kou toolbar mai.<br><img style="max-width: 432.00px" src="img\fadbbfb0cd6bff97.png"></li>
+<li><strong>+ Create Virtual Device</strong> per click karen, (agar aap nai pehlai sai koi device bana kar rakhi hougi tou wou waha list mai show hougi aur <strong>+ Create Virtual Device</strong> ka button us ke baad dikh raha houga) Select Hardware ke dialog mai pehlai sai configured device ki list show hougi.</li>
+<li>Koi bhi device kou chunlain jaisai ke Nexus 5, aur <strong>Next</strong> click karen.</li>
+<li><strong>System Image</strong> ke dialog mai, <strong>Recommended</strong> tab mai se, taza tareen release ka intekhaab karen.</li>
+<li>Agar <strong>Download</strong> link nazar aaraha hou, tou matlab aap ke paas taza tareen release ab tk mojood nahi, aur aap kou isai download karne ki zarurat hai,  agar zaruri hou, tou link per click kar ke download karen, aur <strong>Next</strong> click karen.</li>
+<li>Aglai dialog box mai, default accept karen, aur <strong>Finish</strong> click karen.</li>
+<li>Agar AVD Manager window ab tk chal rahi hai ise close karden.</li>
+</ol>
+<p><strong>Apni application emulator per chalain</strong></p>
+<ol type="1" start="1">
+<li>Android Studio mai, jayain <strong>Run &gt; Run app</strong>, yaa click karen Run icon kou toolbar mai.<br><img style="max-width: 432.00px" src="img\9268fc8f61370c56.png">        </li>
+</ol>
+<aside class="special"><p>Agar aap kou dialog box nazar aayai jis mai likha hou &#34;Instant Run requires that the platform corresponding to your target device (Android N...) is installed&#34; is click karen isai aur aagai barai <strong>install and continue</strong>.</p>
+</aside>
+<ol type="1" start="2">
+<li><strong>Select Deployment Target</strong> dialog mai, <strong>Available Virtual Devices</strong> ke baad, apni tarteeb karda device kaa intekhaab karen, aur <strong>OK </strong>click kare.</li>
+</ol>
+<p>Emulator chalaigaa aur jaisai asli Android device boot houti hai. Aap ke computer ki speed ke hisaab sai yai device shuru hou jayaigee, is mai kuch dair lag sakti hai. Aap dekh sakte hai bikul nichai ki ek bar mai apnai application ke saarai status jou Android Studio ki taraf sai diyai gayai message dikhata hai.</p>
+<p><strong>Message is tarha sai mukhtasr se zahir houngai status bar mai</strong>.</p>
+<p><img style="max-width: 588.00px" src="img\48b77d7e34ca8096.png">        </p>
+<p>Jab aap ki application puri tarha build hou jayaigee tou aap kaa emulator tayar hou jayaigaa, Android Studio aap ki application kou emulator mai upload karegaa aur application chal jayaigee. Install karda application kuch is tarha numaya hougi jaisai is screenshot mai hai.</p>
+<p><img style="max-width: 275.49px" src="img\5ae888411e01f52c.png"></p>
+<aside class="special"><p><strong>Note</strong>: yai ek achi practice hai shuru mai apnai emulator kou chalane ki. Apnai emulator kou bandh naa kare jab tk aap apni application kou ache se test naa karlen, taake aap apna waqt bacha sake baar baar emulator kou boot naa kar ke, or ek waqt mai sirf ek emulator kou chalaen memory kou usage bachane ke liyai.</p>
+</aside>
+<p><strong>Android phone mai application chalaen (agar aap k paas phone hou)</strong></p>
+<p>Aap kou kin cheezo ki zarurat hai:</p>
+<ul>
+<li>Ek adad Android Device ki chahe wou phone hou yaa tablet.</li>
+<li>Ek adad USB cable apnai Android phone kou computer ki USB port ke zariyai connect karnai ke liyai.</li>
+<li>Agar aap linux yaa windows OS istemal kar rahai hai, tou hou sakta hai ke aap kou kuch or steps perform karne parai apni aap kou Android device per chalane k liyai. Is link ki documentation kou check karlen <a href="http://developer.android.com/tools/device.html" target="_blank">Run Apps on a Hardware Devices</a>. Windows mai hou sakta hai aap kou munasib USB driver kou install karne ki zarurat pare is link sai madad hasil karen <a href="http://developer.android.com/tools/extras/oem-usb.html" target="_blank">OEM USB Drivers</a>.</li>
+</ul>
+<p><strong>Apni application kou device per chalaen </strong></p>
+<p>Android Studio kou apnai Android phone sai connect karne ke liyai, aap kou chaheyai ke aap apnai Android phone me USB Debugging on karlen.</p>
+<p>Android 4.2 aur us ke baad walai Android verion per, Developer options pehlai sai numaya nahi houte. Developer options kou dekhne ke liyai aur USB Debugging on karne ke liyai.</p>
+<ol type="1" start="1">
+<li>Apnai Device mai, jayain <strong>Setting &gt; About Phone</strong> aur <strong>Build number</strong> saath (7) martaba click karen.</li>
+<li>Phir lot jayain ek screen pehlai (<strong>Setting</strong>) tk. <strong>Developer options</strong> ab numaya hou gaya hai list mai sab sai nichai. <strong>Developer options </strong>per click karen.</li>
+<li>Ab <strong>USB Debugging</strong> on karlen.</li>
+</ol>
+<p>Ab aap apni Android device connect kar sakte hai or chala sakte hai apni application Android Studio ke zariyai.</p>
+<ol type="1" start="1">
+<li>Apni device connect karen apni development machine ke saath USB cable ki madad sai. Device per hou sakta hai aap kou USB debugging kou allow karna pare apni development machine sai connection ke hawale sai.</li>
+<li><strong>Run</strong> per click karen toolbar mai se. (Hou sakta hai aap kou is toolbar kou numaya karne ke liyai jana pare select View &gt; Toolbar.)  <strong>Select Deployment Target</strong> dialog mai aap ke available emulator aur Android devices show hou jayaingee. <img style="max-width: 24.00px" src="img\6c65750f2ce7f651.png"></li>
+<li>Apni device select karen, aur <strong>OK</strong> click karen.</li>
+</ol>
+<aside class="special"><p><strong>Note</strong>: Agar jou device aap chala rahain hai wou Android platform jou aap ke Android Studio mai pehlai sai mojood nahi, tou hou sakta he aap kou yai message show hou &#34; if you want to install the needed platform&#34;. Click karen <strong>Install and Continue</strong>, aur phir <strong>Finish</strong> per click karen jab process khatam hou jayai.</p>
+</aside>
+<p>Android Studio application kou install karega or aap ki device mai application chal jayaigee.</p>
+<p><strong>Koi masla aayai tou</strong></p>
+<p>Agar aap atak jayain kisi bhi step per, tou Android Studio kou bandh karden or phir shuru karen.</p>
+<p>Agar Android Studio aap ki device kou tasleem naa kare tou, darj zail tareeqai sai koshish karen.</p>
+<ol type="1" start="1">
+<li>Apni device kou Disconnect karen aur phir se connect karen.</li>
+<li>Android Studio Dubara Shuru karen.</li>
+</ol>
+<p>Agar aap kaa computer abhi tk aap ki device kou numaya naa kare yaa isai &#34;unauthorized&#34; kahe:</p>
+<ol type="1" start="1">
+<li>Apni device kou Disconnect karen.</li>
+<li>Device mai jayain settings &gt; Developer Options.</li>
+<li><strong>Revoke USB Debugging authorizations</strong> per click karen.</li>
+<li>Device kou computer sai phir connect karen.</li>
+<li>Jab prompte kare, tou grant authorizations per click karen.</li>
+</ol>
+<p>Aap kou zarurat par sakti hai munasib USB drivers ki apni device ke liyai. Is link kou zarur visit karen <a href="https://developer.android.com/studio/run/device" target="_blank">Using Hardware Devices documentation</a>.</p>
+<p>Is link kou bhi check karen <a href="https://developer.android.com/studio/index.html" target="_blank">latest Android Studio documentation</a>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Janyiyai layout ke barai mai" duration="0">
+        <p>Aam taur per Android application ki her ek screen Kotlin yaa Java class sai munsalik houti hai aur isai <strong>activity </strong>kehtai hai. Yai ek screen jou &#34;Hello World&#34; ke saath aap ke saamne mojood he yai bani hai ek activity se, jis kaa naam hai <code>MainActivity.kt.</code> Yai bani thi jab aap nai apna naya project banaya tha. Her ek activity ke saath ek layout houta hai jou (<strong>user interface</strong>) yani layout ke design kou bayan karta hai. Android Studio ke paas ek layout editor hai jaha aap apne layouts kou bana sakte hai.</p>
+<p>Layout <strong>XML</strong>(jou ke ek markup language hai) is mai banayai jate hai. Layout editor aap kou ijazat deta hai layout kou bayan aur tarmeem dene mai yaa tou coding ke zariyai yaa <strong>interactive visual editor</strong> (jou ke darg and drop design karne mai madad karta hai) is ki madad ke zariyai. Aap aaraam sai ek he waqt mai dono zariyo ke saath kaam kar sakte hai.</p>
+<p>Layout me mojood (<strong>layout&#39;s elements</strong>) ek ek cheez view kehlati hai. Is task mai aap talash karenge layout editor ke kuch panels, aur aap sekhaingai ke kis tarha aap views ki property kou badal sakte hai.</p>
+<h2>Aap kiya sekhnay lagai hai</h2>
+<ul>
+<li>Layout editor kou kis tarha istemal karte hai.</li>
+<li>Property values kis tarha set karte hai.</li>
+<li>String resources kou kis tarha shamil karte hai.</li>
+<li>Color resources kou kis tarha shamil karte hai.</li>
+</ul>
+<h2><strong>Layout Editor kou kholen</strong></h2>
+<ol type="1" start="1">
+<li>Dhundai aur layout folder kou kholen.<br><br><img style="max-width: 282.00px" src="img\27af0b757c0facd9.png"></li>
+<li><strong>activity_main.xml</strong> per double-click karen.<br><br>Dayeeni taraf ek panel khuljayaigaa aur yai panel he layout editor kehlata hai, is mai he files se mutalliq mawad dekhai jaa sakte hai.<br></li>
+<li>Panel ke bilkul nichai agar aap gor karai tou aap kou dou tarha ki tabs wazeh hounga: <strong>Design</strong> aur <strong>Text</strong>. Text tab kou kholen.<br><br><img style="max-width: 117.00px" src="img\304e420e362458f6.png"><br><br>XML kaa code jou layout banata hai wou Text tab mai wazeh hougaa<br><br><img style="max-width: 624.00px" src="img\454fbe7dc0a3718e.png"></li>
+<li>Design tab kou kholen design editor dekhne ke liyai.<br><br><img style="max-width: 624.00px" src="img\f2aad3b53889b9f0.png"><br></li>
+<li>Sab sai upper dayeeni taraf  aap dekh sakkte hai <strong>+ </strong>or <strong>-</strong> ke buttons yai madad aate hai zoom in aur zoom out karne mai. Aap apni madad ke liyai in buttons kaa istemal karengai view kou dekhne or sahi tarha dikhane ke liyai, yaa click kare <strong>Zoom to Fit Screen</strong> button kou jou ke zoom buttons ke (bilkul saath he seedhai hath ki taraf) takai dono panels munasib tareeqai sai fit hou jayai.<br><br><img style="max-width: 624.00px" src="img\edfab57c074d339e.png"> <br><br>Is screenshot mai dekha jaa sakta hai ke bayeen taraf jou panel hai waha aap ki application kaa real preview aayaigaa aur dayeeni taraf jou panel hai is mai us layout kaa blueprint yani ke layout ki (mansooba bandi) dekhi jaa sakti hai.</li>
+<li>Is icon per click kar ke <img style="max-width: 168.75px" src="img\9501980fef848b57.png">  aap apnai layout kou teen view mai dekh sakte hou design, blueprint yaa design + blueprint jaisaa ke aap dekh sakte hai upper dono views ek saath.<br><img style="max-width: 154.50px" src="img\3a0bebbcde3ca0d9.png"></li>
+<li>Orientation icon per click kar ke aap apni application kou dono tarha ki orientation mai wazeh taur per dekh sakta Landscape or potrait dono mode mai pehlai sai orientation view portrait mode per set hougaa.<br><br><img style="max-width: 239.00px" src="img\abf95741df7aafa4.png"></li>
+<li>Device menu kaa istemal karen apni application design kou alag alag mobile size per dekhne ke liyai.<br><br><img style="max-width: 624.00px" src="img\8208e26688825ad0.png"><br></li>
+</ol>
+<h2>Janyiyai Component Tree ke barai mai </h2>
+<ol type="1" start="1">
+<li>Dekhain Component Tree design tab ke kareeb sai nichai ki taraf.<br><br><img style="max-width: 545.54px" src="img\d166c2bb99bb5e88.png"><br><br>Yai panel hai jou aap k layout ke tamam views kou hierarchy structure mai dikhata he.</li>
+<li>Aap sides sai panel kou adjust kar sakte apnai Component Tree kou wazeh tuar per dekhne ke liyai.<br><br><img style="max-width: 267.00px" src="img\b96efd594fe6cbcb.png"><br></li>
+<li>Aap Close Panel Icon per click kar sakte Component Tree kou filhal bandh karne ke liyai. <img style="max-width: 32.00px" src="img\3d51c38178e02cd2.png"><br></li>
+<li>Phir sai Component Tree kou dekhne ke liyai bayeen taraf vertical bar mai likhai &#34;Component Tree&#34; ke lable per click kar ke phir Component Tree kou dekh sakte hai.<br><br><img style="max-width: 130.50px" src="img\aecd86b7456d7ce5.png"><br><br>Ab aap jaan chuke hai kis tarha Component Tree panel ki size kou badal sakte, khol sakte aur bandh kar sakte hain, aur ab waqt hai view hierarchies ke barai mai jaannai kaa.</li>
+</ol>
+<h2><strong>Janyiyai view hierarchies ke barai mai</strong></h2>
+<ol type="1" start="1">
+<li>Aap ne dekha ke Component Tree ki hierarchy mai sab sai upper yani jou root view hai wou hai ConstraintLayout view.<br><br>Sab layout mai root view kaa hona lazmi hai is ke bina aap apnai layout mai views add nahi kar sakte root view he aap ke tamam views kou apnai ander shamil karta hai. Root view humaisha <strong>view group </strong>houga, view group sai murad yai hai ke jou apnai ander dusrai views kou shamil karnai ke kabil hou. ConstriantLayout bhi ek view group hai.</li>
+<li>Dekha jaa sakta hai ke ConstraintLayout apne ander ek TextView kou sambhale huai hai.<br><br><img style="max-width: 267.00px" src="img\b96efd594fe6cbcb.png"><br></li>
+<li>Layout ke XML code kou dekhain <strong>Text</strong> tab per click kar ke jou ke nichai ki taraf hai.<br><br><img style="max-width: 117.00px" src="img\304e420e362458f6.png"></li>
+<li>XML code mai, gour karen agar tou dekha jaa sakta hai ke root element jou ke hai <code>&lt;android.support.constraint.ConstraintLayout&gt;</code> jis mai shamil ek or element hai jou ke hai <code>&lt;TextView&gt;</code> element.</li>
+</ol>
+<pre><code>&lt;android.support.constraint.ConstraintLayout
+  ... &gt;
+
+   &lt;TextView
+      ...  /&gt;
+
+&lt;/android.support.constraint.ConstraintLayout&gt;
+</code></pre>
+<h2>Property value kaisai badal te hai </h2>
+<p>Element ki bohot saari tariqai ki properties houti hai jaisai ke us kaa size, color, name ya id yai sab element property kehlate hai.</p>
+<ol type="1" start="1">
+<li>Text tab mai aap aaraam se dekh sakte hai kuch TextView ki properties.<br><br>Abhi ke liyai aap tools:layout propertie; ki fiqar chorh sakte hai hum jald he wazeh taur per is ke barai janaingai.<br><br></li>
+</ol>
+<pre><code>&lt;TextView
+   android:layout_width=&#34;wrap_content&#34;
+   android:layout_height=&#34;wrap_content&#34;
+   android:text=&#34;Hello World!&#34;
+   ... /&gt;
+</code></pre>
+<ol type="1" start="2">
+<li>Aap <strong>text</strong> property ki value kou change kar sakte jis bhi text sai aap chahe jaisai ke &#34;Khush Amdeed!&#34;.</li>
+<li>Design tab per phir sai jayain.</li>
+<li><strong>TextView </strong>kou muntakhib karain <strong>Component Tree</strong> se.<br><img style="max-width: 267.00px" src="img\490c52f6b3e8a45a.png"></li>
+<li>Properties Panel kou dekhain dayeeni taraf.<br><br><img style="max-width: 255.00px" src="img\b2754059ca7eea50.png"></li>
+</ol>
+<aside class="special"><p><strong>Agar koi masla hou is step mai: </strong></p>
+<ul>
+<li>Agar aap ke samnai Properties Panel wazeh naa hou, click karen is vertical panel kou jou ke upper dayeeni taraf <strong>Properties </strong>label ke saath.<br><br><img style="max-width: 73.00px" src="img\40be5ebfaa1fae28.png"></li>
+<li>Agar aap kaa panel thora alag hai jaisaa panel aap nai abhi dekha us sai tou, aap <strong>View all properties</strong> icon per click kar sakte hai tamam view mai toggle karne ke liyai.<br><br><img style="max-width: 257.50px" src="img\286ddc8c8ea0e0c0.png"></li>
+</ul>
+</aside>
+<ol type="1" start="6">
+<li>TextView ke text field mai Properties panel ke zariyai, text kou badle or <strong>Enter</strong> press karen.<br><br><img style="max-width: 253.00px" src="img\6a3778bfe8083143.png"></li>
+<li>Phir Text tab mai jaa kar tazdeeq karlen ke aap nai jou property badli wou badal gayee XML mai yaa nahi.<br><br><img style="max-width: 294.00px" src="img\bee8bb1392a3e99f.png"></li>
+<li>Application kou run kare apnai karda tabdiliyo kou dekhne ke liyai.<br><br><img style="max-width: 276.47px" src="img\10fce4a9800b535e.png"></li>
+</ol>
+<h2><strong>Text Properties kou change karai</strong></h2>
+<ol type="1" start="1">
+<li>Design tab mai, TextView ke <strong>textAppearance </strong>field kou kholen.<br><br><img style="max-width: 316.50px" src="img\44bc643be27f1f13.png"></li>
+<li>Is mai kuch cheezo kou badle jaisai ke font family kou tabdeel karen, text size kou barhayai, aur style me bold. (hou sakta hai aap kou neechai scroll karna parai is field ke liyai.)</li>
+<li>Text color change kare. <strong>textColor </strong>        field mai type kare <code>g</code>.<br><br>Ek Menu popup aayaigaa kuch values ke saath. Yai list hai pehai sai mojood colors ki jou ke aap apne text color mai set kar sakte. Jald he aap seekhaingai ke kaisai aap apnai khud ke color bana sakte.<br><br><img style="max-width: 350.00px" src="img\28cd7df9d31e625a.png"></li>
+<li><strong>@android:color/dark_gray</strong> ka intekhaab karen or <strong>Enter</strong> press karen.<br><br><img style="max-width: 338.00px" src="img\e4c233680488e78c.png"></li>
+<li>Ab Text tab, XML view mai aap jaa kar dekh sakte apni tabdeel karda properties.<br><br><img style="max-width: 350.00px" src="img\5b9f5df8cee9d7c0.png"><br><br></li>
+</ol>
+<aside class="special"><p>Agar aap dekhain koi aaisaa error &#34;Hardcoded string should use @string recources,&#34; fiqar naa karen is ke liyai, aap jald he seekhaingai isai kese durust karte hai.</p>
+</aside>
+<ol type="1" start="6">
+<li>Application kou phir run karen.<br><br><img style="max-width: 276.47px" src="img\ba2cb50eccdf7346.png"></li>
+</ol>
+<h2>Tamam properties kou dekhen</h2>
+<ol type="1" start="1">
+<li>Phir se Design tab mai jayain aur, properties panel se upper dayeeni taraf, <strong>View all properties</strong> ke icon per click karen. Agar aap kou koi property naa dikhai tou yai janchlai ke TextView kou muntakhib kiya hua hai yaa nahi Component Tree mai.<br><br><img style="max-width: 266.50px" src="img\286ddc8c8ea0e0c0.png"><br>Properties panel TextView se mutalliq properties dikha dega.<br><br><img style="max-width: 210.54px" src="img\3292cf635c16fbbc.png"></li>
+<li>Is list mai scroll karen or dekhain ke aap TextView ki kin properties kou badal kar sakte hai.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="String aur Color resources shamil karen" duration="0">
+        <p>Ab tk aap seekh liya kaisai property values kou badalte hai. Ab, aap seekhengai ke resources kaisai banayee jati hai. Resources kou istemal karte huai aap ek he cheez kou bohot jaga istemal kar sakte hai, yaa values kou set karke aur UI kou badal sake apne aap jab bhi resources values badal jayai.</p>
+<h2><strong>Aap kiya sekhnay lagai hai</strong></h2>
+<ul>
+<li>Kis tarha property value kou nikaal yani (extract) karte hai.</li>
+<li>Kis tarha resources kou banate hai.</li>
+<li>Kis tarha color resources kou banate aur istemal karte hai.</li>
+<li>Layout ki width aur height kou resource ke zariye badalna.</li>
+</ul>
+<h2><strong>Resources nikalna        </strong></h2>
+<ol type="1" start="1">
+<li>Bayeen taraf Project panel mai jayain, aur double-click karen <strong>res &gt; values &gt; string.xml</strong>.<br><br><img style="max-width: 597.50px" src="img\3ea088ef84917a38.png"><br><br>Ab aap ke saamne string.xml file khuli hui hai, fiqar naa karen agar aap kou aaisaa error aayai editing translations.<br><br>Is file mai <code>&lt;resources&gt;</code> ka ek element hai,  jou khud ander ek or element <code>&lt;string&gt;</code> liyai huai hai jis mai aap ki application kaa naam ki wazahat kar raha hai.</li>
+<li>Phir jayain acitvity_main.xml layout file mai. Dihan rakhai aap text tab mai hou. Gor karain agar tou dekhen text property highlighted hai yani ek ishara ker rahi hai.<br><br><img style="max-width: 366.00px" src="img\3b4251e9487de5d1.png"><br></li>
+<li>Highlighted code per click karain tou ek light bulb jaisaa icon namudaar hougaa bayeen taraf.<br><br><img style="max-width: 556.00px" src="img\780e807227f8fc14.png"></li>
+<li>Light bulb icon per click karen, ek menu namudaar hougaa is mai pehlai option kaa intekhaab karen, <strong>Extract string resource</strong>.<br><br><img style="max-width: 464.00px" src="img\7a510dbd96145307.png"></li>
+<li>Jou dialog box aap ke samne zahir hua hai, is mai resource name field aap ki mojooda string value kou bayan karti hai, aur resource value field aap ki string ki value kou. Resource name kou badal kar kuch aur karden jaisai ke <strong>khush_amdeed_text</strong> aur phir <strong>OK</strong> click karen.<br><br><img style="max-width: 272.00px" src="img\35aa6592bdbb49a7.png"></li>
+<li>Text tab mai, gor karain ke android:text property ki value ab badal chuki hai @string/khush_amdeed_text sai.<br><br><img style="max-width: 325.00px" src="img\cfaa0c7a71fc4b33.png"></li>
+<li>Ab jayain string.xml file mai. Gor karen ab aap ki tabdeel karda value ek nayee string resouce ki tarha jama kardi gayee hai, <strong>khush_amdeed_text</strong> ke naam se.<br><br><img style="max-width: 472.00px" src="img\77cc3722dbd92d35.png"></li>
+<li>Is string.xml file mai, value kou change karen jaisai ke <strong>Khush Amdeed! </strong>(yaa apnai marzi kaa koi bhii string.<br><br><img style="max-width: 438.00px" src="img\930796577f69752e.png"></li>
+<li>Phir jayain activity_main.xml mai. Aap dekh sakte hai ke text property abhi tk <strong>@string/khush_amdeed_text</strong> he hai.</li>
+<li>Application kou chalen aur dekhen ke application aap kou dikhayai wou he jou aap tawakka rakhte hai. (aksar apni application kou test karte rahai!).</li>
+</ol>
+<p>Ab aap jante hai kis tarha aap bana sakte hai pehlai sai mojood string kou istemal kar ke nayee string resource kou aur aap khud sai dasti taur per bhi string resource bana sakte hain.</p>
+<p><strong>TextView ke text color aur background kou badlen</strong>.</p>
+<ol type="1" start="1">
+<li>Bayeen taraf project panel mai jayain, aur double click karen <strong>res &gt; values &gt; colors.xml</strong> color resource file kou kholne ke liyai. <br><br><img style="max-width: 624.00px" src="img\351a14b3663b7bc5.png"><br><br>Ab aap ke saamne colors.xml file  khuli hui hai. ab tk is file mai teen colors pehlai sai mojood hai.</li>
+<li>Phir jayian activity_main.xml mai text tab kholen, takai aap dekh sakai layout kaa XML code.</li>
+<li>Apnai TextView mai ek or property add karen <strong>android:background,</strong> aur is property mai value rakhain aaisai <strong>@color</strong>.<br><br>Ek menu namudaar hougaa jou aap kou pehlai sai mojood color resource se laa kar colors dikha raha hougaa:<br><br><img style="max-width: 435.00px" src="img\49bdf4126c6a180a.png"></li>
+<li>Is mai ek color kaa intekhab karen <strong>@color/colorPrimaryDark</strong>.</li>
+<li>Ab <strong>android:textColor</strong> property kou badlen aur is mai yai value rakhen <strong>@android:color/white</strong>.<br><br>Android kaa framework jaisaa ke pehlai bhi zikar kara gaya, apnai paas pehali sai colors ki ek list bayan karta hai jis mai white color bhi shamil hai, tou aap kou white color khid sai bana nahi paregaa.</li>
+<li>Design tab mai jayain activity_main.xml. Aur Properties panel per hide icon per click karen agar screen per size kaa koi issue hou.<br><br><img style="max-width: 269.00px" src="img\5e371c1fc32b277f.png"></li>
+</ol>
+<p>Ab aap dekh sakte hai ke aap kaa TextView ab blue background ke saath hai or is kaa text ab white dikh raha hai.<br><br><img style="max-width: 158.32px" src="img\d884c6e86ce6f76c.png"></p>
+<p><strong>Naya color banayain aur istemal karen screen ke background color ke liyai </strong></p>
+<ol type="1" start="1">
+<li>Is ke liyai jayain colors.xml mai, or naya color resource banayain.<br><br><strong>&lt;color name=&#34;screenKaBackgroundColor&#34;&gt;#FFEE58&lt;/color&gt;<br><br></strong>Yai yellow color hai.</li>
+<li>Design tab mai wapis jayain activity_main.xml mai. Component Tree mai ConstraintLayout ka intekhaab karen.<br><br><img style="max-width: 232.00px" src="img\6dc104a19ca6f95e.png"><br></li>
+<li>Properties panel mai, diplay all properties ke icon per click karen. Waha <strong>background </strong> property kaa intekhaab karen or <strong>Enter</strong> press karen. Waha filed mai type karen &#34;c&#34;.</li>
+<li>Color ke menu mai sai, intekhaab karen <strong>@color/screenKaBackgroundColor <br><br></strong><img style="max-width: 481.00px" src="img\27f6844305c0b7b7.png"></li>
+<li>Yellow color ke chota se box per double-click karen, <strong>background</strong> field mai jou bayeen taraf hai.<br><br><img style="max-width: 448.00px" src="img\e8d11edcaddb632f.png"><br><br>Resources edior kaa color page khulegaa, jou aap kou dikha raha hougaa aap ke bayan karda colors saath he saath Android framework ke pehlai se bayan karda colors ki list,saath he ek behtreen or dilchasp kisam kaa color chooser.<br><br><img style="max-width: 624.00px" src="img\eb24e7949cdb45cf.png"></li>
+<li>Is background yani screenKaBackgroundColor kou badal ne mai kisi bhi kisam ki hichkicha hat naa mehsoos karen.</li>
+</ol>
+<p><strong>Janyiyai width aur height properties ke barai mai.</strong></p>
+<p>Ab jaisaa ke aap ke paas hai naya sreen ka background color, aap isai istemal kar sakte hai dusrai views ki width aur height yani (width aur height sai murad hai chorayee aur lambayee) is mai aayee tabdili dekhne mai.</p>
+<ol type="1" start="1">
+<li>Design tab mai wapis jayain activity_main.xml mai. Component Tree mai ConstraintLayout ka intekhaab karen.<br><br><img style="max-width: 232.00px" src="img\6dc104a19ca6f95e.png"></li>
+<li>Properties panel mai, minimized property view dekhen agar zarurat hou, is ke liyai <strong>View all properties</strong> ke icon pe click karen agar aap chahe.<br><br><img style="max-width: 371.00px" src="img\4e7fd74f57cf13c2.png"><br><br>Jaisaa ke aap dkeh sakte hai <strong>layout_width </strong>aur <strong>layout_height </strong>properties dono pehlai sai set hai <strong>match_parent</strong>. ConstraintLayout humara root view hai, tou joou &#34;parent&#34; layout ka size houta hai wou he aap ki device kaa screen size houta hai. ConstarintLayout ki width aur height screen size jitni he hougi.<br><br></li>
+</ol>
+<aside class="special"><p><strong>Tip</strong>: tamam views mai <strong>layout_width</strong> aur <strong>layout_height</strong> ki properties houngi</p>
+</aside>
+<ol type="1" start="3">
+<li>Design tab mai aap dekh sakte hai ke puri screen kaa background humare color <strong>screenKaBackgroundColor </strong>se tabdeel hou chuka hai.<br><br><img style="max-width: 206.23px" src="img\252ec916ef60d8a6.png"></li>
+<li>Ab TextView mai jaa kar dono width aur height ki properties kou <strong>match_parent </strong>sai tabdeel karden.<br><br><img style="max-width: 210.66px" src="img\a91b4b53ea3b7783.png"></li>
+<li>Khud sai dekhain ke kiya hoga agar width kou <strong>match_parent</strong> aur height kou <strong>wrap_content</strong> dai agar aur baki ishi tarha kuch dusri tabdeeliya kar ke app kou chalain.</li>
+<li>Phir sai TextView ki width aur height kou <strong>wrap_content</strong> karden.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Views aur Constraint kou shamil karen" duration="0">
+        <p>Is task mai, aap apnai interface mai teen buttons shamil karaingai jaisaa ke aap yaha dekh sakte hai.<br><img style="max-width: 212.00px" src="img\dcd4cf388d3aa0d6.png"></p>
+<h2>Aap kiya sekhnay lagai hai</h2>
+<ul>
+<li>Kis tarha nayai views layout mai shamil karte hai.</li>
+<li>Kis tarha alag alag views kou jor tai constrain ki madad sai.</li>
+</ul>
+<h2><strong>View ki constraint properties</strong></h2>
+<ol type="1" start="1">
+<li>Text tab mai, aap dekh sakte hai TextView ki constraint properties.<br><br><img style="max-width: 352.00px" src="img\3535f5096a9fa2d2.png"><br>Yai properties aap ke view ki position yani us ki jaga jaha wou dikhaigaa isai bayan karti hai. Inhai zara gor sai parhai.<br><br>Aap view ke top, bottom, left aur right kou constrain kar sakte hai dusrai view ke top, bottom, left aur right constrain ke saath. Is mamlai mai, humarai paas dusra ek he view hai ConstraintLayout jou ke root view hai, aur jou TextView ka paraent view hai.</li>
+<li>Design tab mai jayain, aur TextView kaa intekhaab karen Component Tree sai aur dekhen Constreint Inspector kou sab sai upper properties panel mai.<br><br><img style="max-width: 357.00px" src="img\3423c9b1912be854.png"><br><br>Har ek blue dot alag alag constraint ki numayindagi karta hai.<br><img style="max-width: 624.00px" src="img\9fc0f12be0a49caf.png"></li>
+<li>Gor karain ke blueprint view bhi constraint dikhata hai jab aap kisi bhi view kaa intekhab karte hai. Apnai cursor kou design view per le jayain, tou waha bhi constraint dekha jaa sakta hai.<br><br><img style="max-width: 286.50px" src="img\dbb4e20009c95c73.png"></li>
+</ol>
+<p><strong>Buttons shamil karen aur un ke jaga kou constrain karai</strong></p>
+<p>Seekhnai ke liyai ke constraints kaisai istemal karte aur dusrai views kou apas mai kis tarha se jor sakte hai. Is ke liyai aap kou apnai layout mai teen buttons shamil karne paraingai.</p>
+<ol type="1" start="1">
+<li>Gor karai Palette section mai layout editor mai sab sai upper. Aap is section ki size kou bada sake aur items dekhne ke liyai.<br><br><img style="max-width: 230.00px" src="img\ab0d0698c1ef3ee3.png"></li>
+<li>Is list kou aaraam sai dekhen aur janayai kiya kiya dastiyab hai.</li>
+<li>Button ka intekhab kare, jou ke list mai upper ki taraf hai, aur isai mouse ki madad se apnai layout mai darg kar ke chor den design view mai, mouse ki madad sai isai TextView ke nichai le jayain<br><br><img style="max-width: 210.60px" src="img\6d49542a4def13e6.png">.<br></li>
+</ol>
+<aside class="special"><p>Gor karain Component Tree mai jaar ke aap ke layout mai button shamil hou chuka hai ConstraintLayout ke ander.</p>
+</aside>
+<h2><strong>Button mai constraint shamil karen</strong></h2>
+<p>Ab aap constrain karo gai Button ke uppri kinare kou TextView ke nichle kinare se.</p>
+<ol type="1" start="1">
+<li>Apnai cursor kou button ke darmiyan uppri dayerai tk lai jayain.</li>
+</ol>
+<aside class="special"><p><strong>Note</strong>: aap zoom option kaa istemal kar sakte hai </p>
+</aside>
+<p><img style="max-width: 283.50px" src="img\782214f18839a3a6.png"></p>
+<ol type="1" start="2">
+<li>Mouse ki madad sai Button ke uppri dayeerai kou drag karte huai TextView ke Nichle kinare wale dayeerai sai jaa milayai.<br><br><img style="max-width: 312.50px" src="img\dfa812df8be708f4.png"></li>
+<li>Ab aap dekh sakte hai Button bikul TextView ke nichai hai, Button ka uppri hisaa ab Constrain hai ab TextView ki nichali hisai sai yani Button TextView sai jaa milaa hai.</li>
+<li>Properties panel mai jaa kar Constraint inspector per nazar dalen. Jou aap kou ek constraint dikha raha hougaa Button ke liyai.</li>
+<li>Text tab mai, nazar dalen XML code mai button ki taraf. Ab waha contraint kaa attribute daal diya gaya hai jou Button ke uppri hissai kou TextView ke nichlai hissai sai milata hai, saath he marginTop ka attribute bhi shamil hai jou khud ba khud shamil hua hai design tab ki madad sai.<br><br><img style="max-width: 387.00px" src="img\8cd04d2bf7437a1e.png"></li>
+</ol>
+<h2><strong>Ek aur button shamil karen</strong></h2>
+<ol type="1" start="1">
+<li>Ek aur button layout mai shamil karen, aur isai kahin bhi drag kar ke chorh den. (fiqar naa karen agar button layout mai kahin bhi jayai.)</li>
+<li>Is mai alag alag constraint laga kar kohsish karte rahai, constraint lagayai aur phir hatayain aaisai kuch aur seekhen constraint ke barai mai.<br></li>
+</ol>
+<aside class="special"><p>Constraint kou delete karne ke liyai:</p>
+<ul>
+<li> Design view mai , cursor kou constraint ke dayeerai mai lai jayain jab tk dayeerai kaa rang lal naa hou jayai aur phir click karen.<br><img style="max-width: 83.91px" src="img\33bdbc24160a97bd.png"></li>
+<li>Yaa properties panel mai jaa kar, cursor kou constraint ke dayeerai mai lai jayain jab tk dayeerai mai X sign naa bana hua aayai, aur phit click karen.<br><br><img style="max-width: 153.96px" src="img\ed99c6ca529177c8.png"><br></li>
+</ul>
+<p>Agar aap chahte hai phir sai constaint shamil karna delete karne ke baad tou yaa tou undo action perfom karen yani <strong>Ctrl+Z </strong>yaa phir dubara constraint shamil karden.</p>
+</aside>
+<ol type="1" start="3">
+<li>Jab aap aaraam mehsoos karen alag alag constraint kou shamil kar ke yaa delete kar ke, tou phir button ke constraint dubara sahi jaga laga kar aagai kaam karen. Bayeena button humesha screen ki bayeeni taraf rakhain, aur dayeena button humesha screen ki dayeeni taraf rakhain. Dono buttons kou screen mai nichai ki taraf lagai aur TextView kou darmiyan mai rakhai.</li>
+</ol>
+<p><br>Is tariqai sai constraint shamil karen:</p>
+<ul>
+<li>Her ek button kaa uppri hissa constrain karegaa TextView ke nichle hissai se.</li>
+<li>Her ek button kaa nichla hissa constrain karegaa screen ke nichle hissai se.</li>
+<li>Bayeen taraf ke button kaa bayeena hissa constrain karegaa screen ke bayeen hissai se.</li>
+<li>Dayeen taraf ke button kaa dayeena hissa constrain karegaa screen ke dayeen hissai se.</li>
+</ul>
+<p><img style="max-width: 225.83px" src="img\55799642ce4bae1c.png"></p>
+<h2><strong>Teesra button shamil karen </strong></h2>
+<p>Aap teesra button shamil karengai pehlai moojood dono buttons ke darmiyanm mai.</p>
+<ol type="1" start="1">
+<li>Teesra button add karen.</li>
+<li>Teesrai button ke dayeen aur bayeen constrain kou padosi ke saath.</li>
+<li>Teesrai button ke uppri or nichle constrain kou mojooda butttons ki tarha he karen. Dusrai alfazo mai, nayai button kaa uppri hissa constrain karegaa TextView ke nichle hissai se aur nayai button kaa nichla hissa constrain karegaa screen ke nichle hissai se.</li>
+<li>Text tab mai XML ke code ki jhanch partal kar len, kiya kisi button mai <strong>app:layout_constraintVertical_bias</strong> attribute hai?  Agar yai attriute code mai naa hou tou aap ke constraint set hai.<br><br>Constraint mai &#34;bias&#34; aap ke view kou apni jagah dusrai view sai alag jaga rakhne me madad deta hai jab dono view ulti jaga per <a href="https://developer.android.com/reference/android/support/constraint/ConstraintLayout#CenteringPositioning" target="_blank">constraint ki simt baraks hou</a>. Jaisai ke, agar view ke dono uppri aur nichle hissai constrain kare screen ke uppri aur nichle hissai se, tou aap apnai view kou ziayada upper yaa ziayada niche ke hissai mai rakh sakte hai bias ki madad se.</li>
+<li>Imkaan hai ke nayai button kaa XML code baki button ke code ke baad hougaa XML file mai. Apnai teesrai button ke code kou baki dono button ke darmiyan lai jayain takai aap ke code mai sahi tarteeb mai aajayai aap ki XML file mai jis tarha sai aap ke design mai buttons dikh rahai hai. Is sai kisi kisam ki desgin ke zahir hounai mai faraq nahi aayaigaa, per yai aap ki madad aasakta hai code kou parhnai mai jasai design mai cheez bani hui hai waisai he code mai dikh rahi hai.</li>
+</ol>
+<p>Yaha hai XML code aap ke layout ke liyai. Aap ke layout ke code mai kuch faraq hou sakta hai jaisai ke margins shayad vertical yaa horizontal bias constarint kaa faraq. Aap ke TextView ke attributes yaa values mai faraq hou sakta hai.</p>
+<pre><code>&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;
+&lt;android.support.constraint.ConstraintLayout xmlns:android=&#34;http://schemas.android.com/apk/res/android&#34;
+   xmlns:app=&#34;http://schemas.android.com/apk/res-auto&#34;
+   xmlns:tools=&#34;http://schemas.android.com/tools&#34;
+   android:layout_width=&#34;match_parent&#34;
+   android:layout_height=&#34;match_parent&#34;
+   android:background=&#34;@color/screenKaBackgroundColor&#34;
+   tools:context=&#34;.MainActivity&#34;&gt;
+
+
+   &lt;TextView
+       android:id=&#34;@+id/textView&#34;
+       android:layout_width=&#34;wrap_content&#34;
+       android:layout_height=&#34;wrap_content&#34;
+       android:background=&#34;@color/colorPrimaryDark&#34;
+       android:fontFamily=&#34;sans-serif&#34;
+       android:text=&#34;@string/khush_amdeed_text&#34;
+       android:textAlignment=&#34;center&#34;
+       android:textColor=&#34;@android:color/white&#34;
+       android:textSize=&#34;30sp&#34;
+       android:textStyle=&#34;bold&#34;
+       app:layout_constraintBottom_toBottomOf=&#34;parent&#34;
+       app:layout_constraintLeft_toLeftOf=&#34;parent&#34;
+       app:layout_constraintRight_toRightOf=&#34;parent&#34;
+       app:layout_constraintTop_toTopOf=&#34;parent&#34; /&gt;
+
+   &lt;Button
+       android:id=&#34;@+id/button&#34;
+       android:layout_width=&#34;wrap_content&#34;
+       android:layout_height=&#34;wrap_content&#34;
+       android:layout_marginBottom=&#34;8dp&#34;
+       android:layout_marginLeft=&#34;8dp&#34;
+       android:layout_marginTop=&#34;8dp&#34;
+       android:text=&#34;Button&#34;
+       app:layout_constraintBottom_toBottomOf=&#34;parent&#34;
+       app:layout_constraintLeft_toLeftOf=&#34;parent&#34;
+       app:layout_constraintTop_toBottomOf=&#34;@+id/textView&#34; /&gt;
+
+   &lt;Button
+       android:id=&#34;@+id/button3&#34;
+       android:layout_width=&#34;wrap_content&#34;
+       android:layout_height=&#34;wrap_content&#34;
+       android:layout_marginBottom=&#34;8dp&#34;
+       android:layout_marginLeft=&#34;8dp&#34;
+       android:layout_marginRight=&#34;8dp&#34;
+       android:layout_marginTop=&#34;8dp&#34;
+       android:text=&#34;Button&#34;
+       app:layout_constraintBottom_toBottomOf=&#34;parent&#34;
+       app:layout_constraintLeft_toRightOf=&#34;@+id/button&#34;
+       app:layout_constraintRight_toLeftOf=&#34;@+id/button2&#34;
+       app:layout_constraintTop_toBottomOf=&#34;@+id/textView&#34; /&gt;
+
+   &lt;Button
+       android:id=&#34;@+id/button2&#34;
+       android:layout_width=&#34;wrap_content&#34;
+       android:layout_height=&#34;wrap_content&#34;
+       android:layout_marginBottom=&#34;8dp&#34;
+       android:layout_marginRight=&#34;8dp&#34;
+       android:layout_marginTop=&#34;8dp&#34;
+       android:text=&#34;Button&#34;
+       app:layout_constraintBottom_toBottomOf=&#34;parent&#34;
+       app:layout_constraintRight_toRightOf=&#34;parent&#34;
+       app:layout_constraintTop_toBottomOf=&#34;@+id/textView&#34; /&gt;
+&lt;/android.support.constraint.ConstraintLayout&gt;
+</code></pre>
+<h2>Apni UI kou tayar karlen alglai task ke liyai</h2>
+<p>Agla task yai hai ke apnai buttons kou is kabil bana ke wou kuch kar sake jab un per click kara jayai. Buttons kou dilchasp banane sai pehlai, UI kou tayar karlen.</p>
+<ol type="1" start="1">
+<li>TextView ke text kou badal kar <strong>0</strong> karden (number zero).</li>
+<li>Button ke text aur <code>id</code> kou badal den. Aap Text tab mai XML code ke zariyai isai badal sakte hai, yaa aap properties panel mai jaa kar design editor ke zariyai. Text aur <code>id</code> kou is tarha badlen.</li>
+</ol>
+<table>
+<tr><td colspan="1" rowspan="1"><p><strong>Button</strong></p>
+</td><td colspan="1" rowspan="1"><p><strong>Text</strong></p>
+</td><td colspan="1" rowspan="1"><p><strong>id</strong></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Bayeena Button</p>
+</td><td colspan="1" rowspan="1"><p>Toast</p>
+</td><td colspan="1" rowspan="1"><p>@+id/toast_button</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Darmiyana Button</p>
+</td><td colspan="1" rowspan="1"><p>Ginti</p>
+</td><td colspan="1" rowspan="1"><p>@+id/ginti_button</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Dayeena Button</p>
+</td><td colspan="1" rowspan="1"><p>Anajan</p>
+</td><td colspan="1" rowspan="1"><p>@+id/anjan_button</p>
+</td></tr>
+</table>
+<h2><strong>Durust karen erros kou agar zarurat pare</strong></h2>
+<p>Agar aap XML code kou edit karen ge tou, XML code mai jou darmiyana button he, jou ke ap <strong>Ginti</strong> button hai, us mai erros aayaingai. Saath he Design tab mai garbar hou jayaigee.</p>
+<p><img style="max-width: 368.00px" src="img\29420a83036e9003.png"></p>
+<p>Error aanai ki wajha sai yai he ke left aur right ki <code>id</code> badal chuki hai.</p>
+<ol type="1" start="1">
+<li>Agar aap kai paas yai errors aayai tou yai dono <code>id</code> kou aap badal den jin ke nichai laal lakir aayee hui hai.<br><br></li>
+</ol>
+<pre><code>app:layout_constraintLeft_toRightOf=&#34;@+id/toast_button&#34;
+app:layout_constraintRight_toLeftOf=&#34;@+id/anjan_button&#34;</code></pre>
+<h2><strong>Button aur TextView ke design kou badal den</strong></h2>
+<p>Aap ke aaplication kaa layout buniyadi tour per pura hou chuka hai, per is mai kuch mazeed tabdeelya layai jaa sakte hai.</p>
+<p><strong>Nayai color resources shamil karen</strong></p>
+<ol type="1" start="1">
+<li>Colors.xml file mai, screenKaBackgroundColor ki value badal kar yai rakh den <code>#2196F3,</code> jou ke ek blue shade color hai <a href="https://material.io/design/color/#color-color-palette" target="_blank">Material Design palette</a> mai.</li>
+<li>Ek naya color shamil karen aur isai naam den &#34;buttonKaBackground&#34; aur isai yai value den <code>#BBDEFB,</code> jou ke ek blue palette ka ek halka shade hai. <br></li>
+</ol>
+<h2><code>&lt;color name=&#34;buttonKaBackground&#34;&gt;#BBDEFB&lt;/color&gt;</code></h2>
+<p><strong>Buttons ke left aur right margins kou tabdeel karen.</strong></p>
+<ol type="1" start="1">
+<li>Jayeeyai aur bayeene taraf ke button kou 24dp left margin den aur is he tarha dayeene button kou 24dp right margin den.</li>
+</ol>
+<pre><code>android:layout_marginLeft=&#34;24dp&#34;</code></pre>
+<pre><code>android:layout_marginRight=&#34;24dp&#34;</code></pre>
+<p><strong>TextView ke design kou badal den</strong></p>
+<ol type="1" start="1">
+<li>TextView ke background kou hata den, chahai value hata kara Properties panel se yaa <code>android:background</code> attribute kou hata kar XML code se.<br><br>Jab aap background hata dengai, tou TextView kaa background shafaf hou jayaigaa (<strong>transparent</strong>)</li>
+<li>TextView ke text size kou 72sp set karen.<br></li>
+</ol>
+<pre><code>android:textSize=&#34;72sp&#34;</code></pre>
+<ol type="1" start="3">
+<li>TextView ki font-family kou badal kar sans-serif per set karen (agar abhi tk naa kiya hou).</li>
+<li>TextView per yai property add karen <code>app:layout_constraintVertical_bias</code> , bias is ki jaga kou thorea upper ki taraf le janai ke liyai takai screen mai aur jagah nazar aayai. Aaraam sai apni marzi ke constraint set karen jaisai aap chahai. (apnai Desgin tab mai dekhte rahai ke layout kesa hai).<br></li>
+</ol>
+<pre><code>app:layout_constraintVertical_bias=&#34;0.3&#34;</code></pre>
+<aside class="special"><p><strong>Tip</strong>: bias attribute kaa istemal bajayai margin yaa padding ke ziyada mufeez hai, khas kar jab alag alag size ki screen aur orientations per kaam hou.</p>
+<ul>
+<li>Agar view constrained hai dusrai view ke donor uppri aur nichle kinare ke saath, vertival bias kaa istemal karen is ki vertical position kou set karne ke liyai.</li>
+<li>Agar view constrained hai dusrai view ke donor daayen aur baayen kinare ke saath, horitontal bias kaa istemal karen is ki horizontal position kou set karne ke liyai.</li>
+</ul>
+</aside>
+<h2><strong>Apni app chalain</strong></h2>
+<p>Agar aap nai tamam kaam kou sahi tareeqai sai ser anjam diya hougaa tou, aap ki applicaiton run hounai ke baad kuch is tarha nazar aayaigee, alag alag design aur color kaa istemal karen apni app kou mufeed banai ke liyai.</p>
+<p><img style="max-width: 212.00px" src="img\dcd4cf388d3aa0d6.png"></p>
+<p>Aap nai apni application mai buttons shamil kar liyai hai, per abhi tk aap ke buttons kuch kaam nahi karte. Aap inhai is kabil agali task mai banayaingai.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Apni application kou karamat banayain." duration="0">
+        <p>Aap nai apni application mai buttons shamil kar liyai hai, per abhi tk aap ke buttons kuch kaam nahi karte. Aap inhai is kabil ishe task mai banayaingai.</p>
+<p>Pehlai aap kaam karenge Toast walai  button per pop-up message show karane ke liyai jiasai toast kehte hai. Phir aap kaam karenge Ginti walai button per jou TextView ke number kou badle gaa.</p>
+<h2><strong>Aap kiya sekhnay lagai hai</strong></h2>
+<ul>
+<li>Kis tarha onClick method kouo view mai shamil karte hai.</li>
+<li>Kis tarha view kou dhoondhte hai is ki ID ke zariye.</li>
+<li>Kis tarha view ki property kou set aur get karte hai.</li>
+</ul>
+<h2><strong>Auto imports kou enable karen</strong></h2>
+<p>Apnai button kou kaam karne ke kabil banane sai pehlai, aap ek cheez kou enable yani kaam karne ke kabil banayaingai aap enable karengai auto-import kou takay Android Studio apnai aap zaruri classes jou aap ki application aur Kotlin code kou chalanai mai zaruri hou import kar sake.</p>
+<ol type="1" start="1">
+<li>Android Studio mai, setting editor kou chalain. Is ke liyai jayain <strong>File &gt; Other Settings &gt; Default Settings</strong>.<br><br><img style="max-width: 437.00px" src="img\c1e81efde383f9d5.png"></li>
+<li>Auto Import kaa intekhaab karen. Java section mai, khayal rakhen yai option checked hou <strong>Add Unambiguous Imports on the fly</strong>.<br><br><img style="max-width: 624.00px" src="img\be0b4a88fece940c.png"></li>
+<li>Setting editor kou close karden.</li>
+</ol>
+<h2><strong>Toast kou dikhaen</strong></h2>
+<p>Is step mai, aap Toast button mai ek method shamil karenge jab user isai dabayai. Ek toast jou ke ek mukhtasar saa message samnai layaigaa jou ke aap nichai screen mai dekh sakte hai.<br><img style="max-width: 259.50px" src="img\a9e9bbbf551bb0d2.png"></p>
+<ol type="1" start="1">
+<li>MainActivity.kt kou kholen. Jayeyai <strong>app &gt; java &gt; com.codelab.maireepehliapp</strong> MainActivity kou dhun ne ke liyai.<br><br>Is class mai sirf ek method hai, onCreate(). onCreate() method tab chalta hai jab activity shuru houti hai.</li>
+<li>Dekh len onCreate() method kou. Gor karen ek link jou call karti hai is method kou setContentView(). Yai wou line hai jou activity ke layout kou activity_main.xml mai set karti hai yani milati hai.<br></li>
+</ol>
+<pre><code>setContentView(R.layout.activity_main)</code></pre>
+<ol type="1" start="3">
+<li>Ek naya method banayai aur isai naam den toastDikhao() MainActivity class mai. Yai toastDikhao() method aap sai ek single argument lega View. Yai he wou View hai jou click event kou wasool karegaa yani receive karegaa.<br></li>
+</ol>
+<pre><code>fun toastDikhao(view: View){
+   //val mairaaToast = Toast.makeText(this,message,duration)
+   val mairaaToast = Toast.makeText(this,&#34;khush Amdeed!&#34;,Toast.LENGTH_SHORT)
+   mairaaToast.show()
+}
+</code></pre>
+<ol type="1" start="4">
+<li>Layout file ki Text tab mai, Toast button mai ek android:onClick ki property shamil karen. Aur is ki value mai set karen <strong>toastDikhao</strong>.<br></li>
+</ol>
+<pre><code>android:onClick=&#34;toastDikhao&#34;</code></pre>
+<ol type="1" start="5">
+<li>Application chala kar dekhen aur toast button per click karen, Kiya aap nai toast message dekha screen ke bottom mai?<br></li>
+</ol>
+<p>Aap nai seekha kaisai apni application kou karamat banayain ke liyai aap kou zarurat houti hai:</p>
+<ul>
+<li>Ek method banana jaha aap apna click per karne wala kaam bayan karte hai activity mai. Is method kaa public hounaa lazmi aur, is ki return type Unit hou yaa koi bhi return type naa lagayain, aur ek argument jou ke View ki hai.</li>
+<li>Us method ke naam kou view ki <strong>onClick</strong> property ki value mai set karden.</li>
+</ul>
+<h2><strong>Count button kou number badalnai ke kabil banayain</strong></h2>
+<p>Wou method jou toast dikhata hai wou bohot saadaa saa method hai; wou kisi aur view per koi tabdeeli nahi lata. Ab is step mai aap ek aaisaa behavior yani button ke click sai honai wala kaam aaisaa hou jou dusrai view kou badle.</p>
+<p>Ginti button per kaam karen, tou jab usai click kiya jayai, tou screen per dikhayaa jaa raha number ek ek kar ke barhta jayai.</p>
+<ol type="1" start="1">
+<li>Layout file mai, gor karain TextView ki <code>id</code> kiya hai.<br></li>
+</ol>
+<pre><code>&lt;TextView
+   android:id=&#34;@+id/textView&#34;</code></pre>
+<ol type="1" start="2">
+<li>ActivityMain.kt mai, ek method shamil karen aur is kaa naam gintiKaro() rakhen MainActivity class mai. Yai method Ginti button per click karne per kaam karegaa, tou yai method public hai, aur naa he koi return statment hai, aur ek argument bhi hai jou View hai.<br></li>
+</ol>
+<pre><code>fun gintiKaro(view: View){
+
+}</code></pre>
+<ol type="1" start="3">
+<li>Pehlai sai bana hua mehod findViewById() kaa istemal karen, apnai TextView kou wasool karne ke liyai jou ke ginti dikhayee gaa.yai method View return karta hai, tou aap kou zarurat par sakti hai isai cast karne ki View sai TextView mai, us ki <code>id</code> ki madad sai dhunde.<br></li>
+</ol>
+<pre><code>fun gintiKaro(view: View){
+   // text view kou yaha wasool karen
+   val gintiWalaTextView = findViewById(R.id.textView) as TextView
+}</code></pre>
+<ol type="1" start="4">
+<li>TextView sai value hasil karan.<br></li>
+</ol>
+<pre><code>fun gintiKaro(view: View) {
+   // text view kou yaha wasool karen
+   val gintiWalaTextView = findViewById(R.id.textView) as TextView
+
+   // text view sai value hasil karen.
+   val gintiString = gintiWalaTextView.text.toString()
+}</code></pre>
+<ol type="1" start="5">
+<li>Is String value kou number mai tabdeel karen, aur phir barhayain.<br></li>
+</ol>
+<pre><code>fun gintiKaro(view: View) {
+   // text view kou yaha wasool karen
+   val gintiWalaTextView = findViewById(R.id.textView) as TextView
+
+   // text view sai value hasil karen.
+   val gintiString = gintiWalaTextView.text.toString()
+
+   // string value kou number mai tabdeel karen aur barhayain
+   var ginti: Int = Integer.parseInt(gintiString)
+   ginti++
+}</code></pre>
+<ol type="1" start="6">
+<li>Nayee value kou TextView mai dikhaen.<br></li>
+</ol>
+<pre><code>fun gintiKaro(view: View) {
+   // text view kou yaha wasool karen
+   val gintiWalaTextView = findViewById(R.id.textView) as TextView
+
+   // text view sai value hasil karen.
+   val gintiString = gintiWalaTextView.text.toString()
+
+   // string value kou number mai tabdeel karen aur barhayain
+   var ginti: Int = Integer.parseInt(gintiString)
+   ginti++
+
+   //nayee value kou text view mai dikhaen.
+   gintiWalaTextView.text = ginti.toString()
+}</code></pre>
+<ol type="1" start="7">
+<li>Ab yai method tayar hai apnai kaam ke liyai. Ab kou yai karna hai ab ke Ginti button per yai method kaam kare jab isai click kiya jayai? Jayain aur yai kaam karen.<br><br><em>Hint:</em> button ki onClick property set karen.</li>
+<li>Application kou run karen aur ginti kou barhte huai dekhen.</li>
+</ol>
+<p><strong>Kotlin mai Android Extention ke Plugin</strong></p>
+<p>Aap nai jana ke aap View hasil karte hai findViewById() kaa istemal karte huai. Agar aap is tareeqai sai view hasil karte hai tou aap kou isai alag view mai istemal karne ke liyai cast karna parta hai. Tou aksar aap kou findViewById kaa istemal karna parta hai, tou aap is method kou bar bar call karte rahain gai. Yaha ek bohot he ziyada aasaan tareeqa hai is code kou istemal karte huai <a href="https://kotlinlang.org/docs/tutorials/android-plugin.html" target="_blank">Kotlin Android Extensions plugin</a>.</p>
+<ol type="1" start="1">
+<li>Plugin kou <strong>build.gradle (Module: app)</strong> file mai shamil karen. Gor karen is file mai faraq hai is file sai build.gradle (Project: MaireePehliApp).<br><br><img style="max-width: 624.00px" src="img\80bf9c66ccf911ea.png"></li>
+<li><strong>MainActivity.kt</strong> mai darj zail import shamil karen sab sai upper:<br><br><strong>import </strong>kotlinx.android.synthetic.main.activity_main.textView<br></li>
+<li><strong>MainActivity.kt</strong> mai gintiKaro walai method me jayen.<br></li>
+</ol>
+<pre><code>fun gintiKaro(view: View) {
+   // text view sai value hasil karen.
+   val gintiString = textView.text.toString()
+
+   // string value kou number mai tabdeel karen aur barhayain
+   var ginti: Int = Integer.parseInt(gintiString)
+   ginti++
+
+   //nayee value kou text view mai dikhaen.
+   textView.text = ginti.toString()
+}</code></pre>
+<ol type="1" start="4">
+<li>Yai code <code>val gintiWalaTextView = findViewById(R.id.textView) as TextView</code> is code ki ab zarurat nahi. Isai import <code>kotlinx.android.synthetic.main.activity_main.textView</code> aap <strong>TextView </strong>tk pohanch sakte hai.</li>
+</ol>
+<p><br>Aam tou per jab aap kou kisi view ki zarurat hou tou is tarha aap isai hasil kar sakte hou.<br><code>kotlinx.android.synthetic.main.&lt;layout file ka naam&gt;.&lt;view ki id&gt;</code></p>
+<p>Agar aap kou kisi layout file ke sarai view ek saath chaheyai tou is tarha kar sakte.<br><code>kotlinx.android.synthetic.main.&lt;layout file ka naam&gt;.*</code></p>
+<p>Is variable kaa naam jou Kotlin code mai hai wou aayaa hai is view ki id sai. Jaisaa ke hum dekh sakte hai ke import kiya gaya TextView kou <strong>textView</strong> sai istemal kiya gaya hai. Is he liyai kiyun ke main_activity.xml code mai id textView he hai.<br><br><img style="max-width: 624.00px" src="img\3b776f6322489f0d.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Dusri activity banayain." duration="0">
+        <p>Ab tk, aap ki app ke paas sirf ek screen hai. Ab aap ek dusri activity shamil karenge jis ki khud ek screen hougi.</p>
+<p>Aap Anjan button per kaam karenge apni dusri activity dikhane ke liyai jou ek Anjan yani ek Random number dikhayai gi 0 se mojooda ginti ki gayee value tk.<br><img style="max-width: 214.26px" src="img\da8acd9df1eaf840.png"><br><br><strong>Aap kiya sekhnay lagai hai</strong></p>
+<ul>
+<li>Kis tarha nayee activity start karte hai intent ki madad se.</li>
+<li>Kis tarha ek activity sai dusri activity mai data bhijhte hai put extra ki madad sai.</li>
+<li>Kis tarha bhaijhi gayee value kou aghli activity mai wasool karte hai.</li>
+</ul>
+<h2><strong>Nayee activity banayain</strong></h2>
+<ol type="1" start="1">
+<li>com.codelab.maireepehliapp package kaa intekhaab karen , jayain <strong>apps &gt; java &gt; com.codelab.maireepehliapp</strong>.<br><br><img style="max-width: 440.00px" src="img\82108adc6f27e4e2.png"></li>
+<li>Yaha right click karen aur is option kaa intekhaab karen <strong>New &gt; Activity &gt; Empty Activity</strong>.<br><br><img style="max-width: 593.50px" src="img\fc0c9c68368b9e50.png"></li>
+<li>&#34;Configure Activity&#34; popup mai, activity name field mai naam rakhain DusriActivity. Aut dihaan rakhen ke Source Language mai Kotlin muntakib hou.<br><br><img style="max-width: 624.00px" src="img\c2d8ea3e9637a752.png"><br></li>
+</ol>
+<aside class="special"><p>Mutmaeen hou jayain ke aap kaa package name sahi hou aap ki appliction ke liyai. Agar package mai kuch naa likha hou tou apnai package kaa naam package name filed mai rakhain jaisai com.codelab.maireepehliapp</p>
+</aside>
+<ol type="1" start="4">
+<li>Finish click karen. Android Studio dono XML file aur Kotlin file bana degaa aap ki nayee activity ke liyai.<br></li>
+<li>Thora sabar karen Gradle ke sycn hounai kaa Android Studio mai.<br><br>Gradle ek build system hai jou Android Studio use karta hai aap ki application kou compile aur build karne ke liyai. Aap nechai screen mai gradel sync hounai kaa message dekh sakte hai.<br><br><img style="max-width: 158.00px" src="img\ff0ab57fbd932cfa.png"></li>
+</ol>
+<h2><strong>Manifest file kou jhanchle</strong></h2>
+<ol type="1" start="1">
+<li>Android manifest file kou kholen, jayain <strong>app &gt; manifests &gt; AndroidManifest.xml</strong>.<br><br><img style="max-width: 446.00px" src="img\62bbe6ce6044e5e3.png"><br>Yai manifest file aap ki application ke barai mai saari maloomaat rakhti hai, bashmool tamam application ki activities ke barai mai bhi.</li>
+<li>Dekhain &lt;activity&gt; tag MainActivity ke liyai.<br><br><img style="max-width: 624.00px" src="img\13b9cd6272a1c27.png"><br>Aap dekh sakte hai &lt;activity&gt; tag wazahat karta hai activity ke naam ki. Main Activity wou activity hai jou application ke chalte he chalti hai, tou is mai izaafi maloomat mojood hai jou is ke launcher acitvity houne ki wazahat dete hai.</li>
+<li>Dekhen &lt;activity&gt; tag mai aap ki dusri activity ke liyai. Yaha sirf activity ke naam ki wazahat hai.<br><br><img style="max-width: 624.00px" src="img\2623c1126310d20e.png"><br></li>
+</ol>
+<aside class="special"><p>Har activity kaa manifest mai bayan houna lazmi hai. Aap apni application mai nayee activity shamil kar sakte hai bina akhri baar kiyai gaya tareeqai sai bhi yani popup dialog ke bina bhi, per phir aap kou activity kou khud se manifest mai shamil karna paraigaa.</p>
+</aside>
+<h2><strong>Nayee activity ki Kotlin file kou jhanchle</strong></h2>
+<ol type="1" start="1">
+<li>DusriActivity.kt kholen.</li>
+<li>Dekhlen ke onCreate() method. Gor karain us line per jou call karti hai setContentView(). Yai mehthod aap ke dusri activty ke layout kou set karegaa activity_dusri.xml sai.</li>
+</ol>
+<pre><code>setContentView(R.layout.activity_dusri)</code></pre>
+<p>Aap is activity mai method shamil karenge ajnan yani ek random number dikhane ke liyai. Sab sai pehlai tou aap kou is activity mai views bananai houngai jou random number kou dikha sake.</p>
+<h2><strong>Nayee activity ke liyai layout kou banayain</strong></h2>
+<p>Nayee activity ki screen aap kou dikha rahi hougi ek heading title aur ek random number. Yaha aap dekh sakte hai aap ki screen kaisee lagai gi.</p>
+<h2><strong>Heading ke liyai TextView add karen</strong></h2>
+<ol type="1" start="1">
+<li>Apni dusri_activity.xml file kou kholen. Aap dekh sakte hai is mai ConstraintLayout hai aur is mai kuch bhi nahi. Yai ek pehali sai tayar layout hai jou empty activity banate huai banta hai.</li>
+<li>Is mai <strong>TextView </strong>shamil karen pallere ki madad sai. Yai TextView istemal kiya jayaigaa upper ki taraf heading dikhane ke liyai.</li>
+<li>TextView ke uppri kinara constrain karegaa screen ke uppri hissai sai, aur dayeena kinara constrain karegaa screen ke dayeeni hissai se, aur bayeena kinara constrain karegaa screen ke bayeeni hissai se. TextView ke nichle hissai kou constrain naa den.</li>
+<li>Width kou <strong>match_parent </strong>set karen, per height kou <strong>wrap_content</strong> set karen, taake height apne ander ke mawad ke hisaab se set hou.</li>
+<li>Is ki <code>id</code> kou set karen @id/textview_label.</li>
+<li>Margin kou dayeen, bayeen aur upper ki taraf sai <strong>24dp </strong>set karen. Yani sirf left, right aur top margin set karen, left aur right margin ki jaga &#34;start&#34; aur &#34;end&#34; bhi istemal kar sakte take localization karte huai , zaban ke hisaab se margin set hou.</li>
+<li>Text ke color kou <strong>@color/colorPrimaryDark</strong> set karen aur text ke size kou <strong>24sp</strong> se set karen.</li>
+<li>Is mai text set karen &#34;Yaha hai ek random number hai 0 sai %1d&#34;.</li>
+<li>Is String kou resource mai extract karen aur naam den <strong>uppri_heading</strong>.</li>
+</ol>
+<p><img style="max-width: 466.00px" src="img\3715ac6809c0d2ec.png"><br><img style="max-width: 271.00px" src="img\f4001652ce80a11f.png"></p>
+<p>Yaha he TextView ka XML code jou heading dikhayaigaa:<br></p>
+<pre><code>&lt;TextView
+   android:id=&#34;@+id/textview_label&#34;
+   android:layout_width=&#34;match_parent&#34;
+   android:layout_height=&#34;wrap_content&#34;
+   android:layout_marginLeft=&#34;24dp&#34;
+   android:layout_marginRight=&#34;24dp&#34;
+   android:layout_marginTop=&#34;24dp&#34;
+   android:text=&#34;@string/uppri_heading&#34;
+   android:textColor=&#34;@color/colorPrimaryDark&#34;
+   android:textSize=&#34;24sp&#34;
+   app:layout_constraintLeft_toLeftOf=&#34;parent&#34;
+   app:layout_constraintRight_toRightOf=&#34;parent&#34;
+   app:layout_constraintTop_toTopOf=&#34;parent&#34; /&gt;</code></pre>
+<h2><strong>Ek TextView shamil karen jou random number dikhayai</strong></h2>
+<ol type="1" start="1">
+<li>Random number dikhane ke liyai TextView shamil karen.</li>
+<li>Dono width aur height kou <strong>wrap_content </strong>set karen.</li>
+<li>Yai TextView bilkul niche hou gaa heading TextView ke. Is TextView ke uppri kinare kou constrain kare heading TextView ke nichle kinare sai. Aur baki teeno kinaro kou constrain kre screen ke mutabiq.<br><br><img style="max-width: 211.00px" src="img\609c7543c3e22716.png"></li>
+<li>Is TextView kou <strong>id </strong> den <strong>@+id/textview_random</strong>.</li>
+<li>Dayeen, bayeen aur uppri margin kou <strong>24dp</strong> set karen. </li>
+<li>Is TextView ke textColor kou <strong>@android:color/white</strong> den, aur textSize <strong>72dp</strong> set karen,  aur textStyle kou <strong>bold</strong> set karen</li>
+<li>Is TextView ke text mai <strong>R </strong>set karen. Yai sirf ek placeholder yaani sirf jagh ghairai hua hai jab tk yaha random number naa aayai.</li>
+<li>Is TextView mai <strong>layout_constraintVertical_bias</strong> kou <strong>0.45</strong> set karen.<br><br>Yai TextView constrained hai sarai kinaro sai, tou yai acha hougaa ke vertical bias kaa istemal kiya jayai muqable margins ke is TextView kou sahi jagah rakhnai mai, aur layout kou acha dikhane mai alag alag screen size aur oreantatiton mai.</li>
+</ol>
+<p>Yeh raha TextView kaa XML code jou humai rando number dikhaye gaa.</p>
+<pre><code>  &lt;TextView
+   android:id=&#34;@+id/textview_random&#34;
+   android:layout_width=&#34;wrap_content&#34;
+   android:layout_height=&#34;wrap_content&#34;
+   android:text=&#34;R&#34;
+   android:textColor=&#34;@android:color/white&#34;
+   android:textSize=&#34;72sp&#34;
+   android:textStyle=&#34;bold&#34;
+   app:layout_constraintBottom_toBottomOf=&#34;parent&#34;
+   app:layout_constraintLeft_toLeftOf=&#34;parent&#34;
+   app:layout_constraintRight_toRightOf=&#34;parent&#34;
+   app:layout_constraintTop_toBottomOf=&#34;@+id/textview_label&#34;
+   app:layout_constraintVertical_bias=&#34;0.45&#34; /&gt;</code></pre>
+<h2>Layout kaa background color badal den </h2>
+<p>Apni dusri activity kou ek alag saa background den apne pehali activity ke muqable mai:</p>
+<ol type="1" start="1">
+<li>Jayain color.xml mai, ek naya color resource shamil karen:<br></li>
+</ol>
+<pre><code>  &lt;color name=&#34;dusriScreenKaaBackground&#34;&gt;#26C6DA&lt;/color&gt;</code></pre>
+<ol type="1" start="2">
+<li><h2>Dusri activity ke layout mai, ConstraintLayout ke background kou naya color sai set karen.<br><br>Properties panel mai:<br><br><img style="max-width: 408.00px" src="img\79f0d5253e8392c4.png"><br><br>Yaa XML se:<br><br></h2>
+</li>
+</ol>
+<pre><code> android:background=&#34;@color/dusriScreenKaaBackground&#34;</code></pre>
+<h2>Aap ki app kaa layout ab pura hou chuka hai dusri activity mai. Aap isai dekh sakte hai Design tab mai jaa kar, per aap isai apni application mai chala kar nahi dekh sakte kyun ke abhi tk aap ki applicaiton mai screen badalnai kaa koi zariya mojood nahi.<br><br><img style="max-width: 469.00px" src="img\60a5368290493d87.png"></h2>
+<h2><strong>Dusri activity kou chalain</strong></h2>
+<p>Intetns ek aaisee cheez hai jisai aap keh sakte hai jou khuwaish kou zahir kare yaa kisi cheez kaa <strong>iraada </strong>kuch karne kaa. Yai buniyadi tuar per ek paigaam hai jou kehta hai &#34;mai koi bhi XYZ kaam karna chahta hun&#34;,  jaha XYZ kaam yai hou sakta kai dusri activity kou chala dou. Ek bar yai paigaam bhijha jata hai, yai Android ke Framework taayyun karegaa ke intent kaa kiya nateeja houga. Dusri activity kou chalane ke liyai, aap kou zarurat paregi Intent object banane ki jou activity kou khole. Tou phir aap call karengai startActivity() is Intent object ke saath, jou Android Framework kou paigaam bhaijhai gaa. Aut phir Android Framework aap ke liyai activity kou kholega. Ab aap yai he karne lagai hai:</p>
+<ol type="1" start="1">
+<li>MainActivity.kt ke Kotlin ka code open karen.</li>
+<li>Ek naya method shamil karen, anjanScreen(), jou kaam karaigaa jab Anjan button per click kara jayai.<br><br>Jaldi, bina yaha dekhai yai saara kaam karen, jou jou zarurat hai ek button click per karamat aanai walai button ki wou he is method mai code karen? Agar aap kou yaad nahi , tou aap pehlai ki gayee example kou dekh sakte toastDikhao() aur gintiKaro() method kou.</li>
+<li>Yai code anjanScreen() method mai shamil karen.<br></li>
+</ol>
+<pre><code>// Intent banayai jou dusri activity kou shuru kare
+val anjanIntent = Intent(this, DusriActivity::class.java)
+
+// Shuru kare nayee activity.
+startActivity(anjanIntent)</code></pre>
+<ol type="1" start="4">
+<li>Ab karan yai hai ke is method kou Anjan button ke onClick mai call karden, abhi ke abhi.</li>
+<li>Application kou chala kar dekh len apni dusri activity tk jayain Anjan button per click karke, per yai abhi tk random number nahi dikhayee gaa.<br><br><img style="max-width: 236.70px" src="img\80c44f8ad9cd2658.png"><br></li>
+</ol>
+<h2><strong>Activities ke darmiyan mai maloomat ka guzarna</strong></h2>
+<h2>Is dusri activity mai humara maqsad yai hai ke humai ek random number banana hai aur dikhana hai 0 sai humairai abhi tk giniti kiyai huai number ke darmiyan mai sai. Lihaza dusri activity kou humairai giniti kiyai kiyai gayai number kaa pata hounaa lazim hai. Aap yai maloomat guzar sakte hai dusri activity tk Inter mai extra maloomat ke madad sai jou ke putExtra() ke method se saranjam di jaati hai.</h2>
+<p>Dusri activity us Intent jis sai sai wou activity start hui hasil kar sakti hai, aur phir us he extra mai aayaa data hasil kar sakte.</p>
+<h2><strong>MainActivity sai DusriActivity mai data bhiajhai put extra ki madad se</strong></h2>
+<ol type="1" start="1">
+<li>DusriActivit.kt, mai ek static variable kou declare karen isai naam den PURI_GINTI, isai istemal karen aayai huai data ki key ke liyai.<br><br></li>
+</ol>
+<pre><code>companion object {
+   const val PURI_GINTI = &#34;puri_ginti&#34;
+}</code></pre>
+<ol type="1" start="2">
+<li>Tarmeem dijyai nayeeScreen() ke method kou. Pehlai ginti walai TextView sai abhi tk ki ginti ki gayee value. Usai Int mai convert karen, phir putExtra() kou istemal karen isai intent mai lagayen, yai method dou paramenters leta hai, ek key dusra value; key ki jagha per apna static variable PURI_GINTI laga den, aur value mai interger mai convert ki gayi abhi tk ki ginti set karden kuch is tarha.<br><br></li>
+</ol>
+<pre><code>anjanIntent.putExtra(DusriActivity.PURI_GINTI, ginti)</code></pre>
+<p>Yaha hai pura code nayeeScreen() ke method mai se.</p>
+<pre><code>fun nayeeScreen(view: View) {
+   // Intent banayai jou dusri activity kou shuru kare
+   val anjanIntent = Intent(this, DusriActivity::class.java)
+
+   // text view sai value hasil karen.
+   val gintiString = textView.text.toString()
+
+   // string value kou number mai tabdeel karen aur barhayain
+   val ginti: Int = Integer.parseInt(gintiString)
+
+   // ginti kou intent ke extra mai daal den
+   anjanIntent.putExtra(DusriActivity.PURI_GINTI, ginti)
+
+   // Shuru kare nayee activity.
+   startActivity(anjanIntent)
+}</code></pre>
+<h2>DusriActivity mai banayai aur dikhaen random number <strong> </strong></h2>
+<p>Aap nai code likh liya houga jis sai ginti dusri activity tk pohanch jayai. Agla kaam yai hai ke DusriActivity.kt mai code kiya jayai jou abhi tk ki ginti kou bazyaaft yani get karai aur istemal kare.</p>
+<p><strong>Ek method likhai jou abhi tk ki ginti kou bazyaaft kare aur phir ek random number banayai aur phir isai dikhayai</strong></p>
+<ol type="1" start="1">
+<li>DusriActivity.kt mai, ek method shamil karen, is kaa naam rakhen dikhaoRandomNumber() jou ek bhi arguments naa le.</li>
+<li>Is method mai random number banayain aur dikhain, jaha per sab sai bari value jou hou wou abhi extra mai aayai huai number tk hou jou Intent mai aaya hai.</li>
+<li>Istemal karen getIntent() method kou jis sai aap kou activity start karne wala intent mil jayai. Phir is intent per getIntExtra()  kaa method call karen jou aap kou aap ka bhaijha hua number de; is ki argument key aur is ki pehlai sai set value hai <strong>key is not found</strong>.</li>
+</ol>
+<aside class="special"><p><strong>Note</strong>: jab extras mai sai data nikal rahain hou, tab aap kou extras mai aayai huai data ki type pata houni chaheyai. Aur is ki hisaab sai sahi method istemal karen jaisai ke getStringExtra() yaa getIntExtra().</p>
+</aside>
+<p>Yaha hai pura code aap ke dikhaoRandomNumber() method ke liyai:<br></p>
+<pre><code>fun dikhaoRandomNumber(){
+        val count = intent.getIntExtra(PURI_GINTI, 0)
+
+        // random number kou banayain
+        val random = Random()
+        var randomInt = 0
+        // ek kou saath shamil karen khususi bound ke liyai
+        if (count &gt; 0) {
+            // ek kou saath shamil karen khususi bound ke liyai
+            randomInt = random.nextInt(count + 1)
+        }
+
+        // random number kou dikhane ke liyai.
+        textview_random.text = Integer.toString(randomInt)
+
+        // aayee hui value kou subtitue karen string resource sai
+        // headin ke liyai aur headin kou chaneg karne ke liyai
+        textview_label.text = getString(R.string.uppri_heading, count)
+    }</code></pre>
+<h2><strong>onCreate() method mai tabdeeli karen</strong></h2>
+<p>Jab Activity shuru houti hai, tab is ka onCreatte() method chalta hai. Abhi tk DusriActivity ke onCreate() method mai activity kaa layout set hou raha hai. Aap is he onCreate() method mai dikhaoRandomNumber() kou call karenge takai aap random number kou dikha saken.</p>
+<ol type="1" start="1">
+<li>DusriActivity ke onCreate() method mai sab sai aakhir mai dikhaoRandomNumber() call karen.<br><br></li>
+</ol>
+<pre><code>override fun onCreate(savedInstanceState: Bundle?) {
+   super.onCreate(savedInstanceState)
+   setContentView(R.layout.activity_dusri)
+   dikhaoRandomNumber()
+}</code></pre>
+<ol type="1" start="2">
+<li>App kou chalain, Ginti walai button kou kuch martaba dabayain, phir Anjan button dabayain. Kiya aap ki DusriActivity mai ek random number wazeh hua?<br><br><img style="max-width: 624.00px" src="img\b8704043757fc164.png"></li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Seekhen aur bhi." duration="0">
+        <p>Mubarak hou aap nai apni pehli Android application bana li hai!</p>
+<p>Is code lab ke pichai jou irada tha wou yai tha ke aap kou ek Android application bana aajayai. Hum shart lagate hai aap kou abhi aur bhi bohot kuch jaannaa hai, jaisai ke data kis tarha save karen? Background task kasai chalain? Yai kaisai karen wou kaisai karen...</p>
+<p>Hum aap ki hosla afzayee karten hai ke aap aur bohot kuch seekhen.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-49880327-14', 'auto');
+
+    (function() {
+      var gaCodelab = '';
+      if (gaCodelab) {
+        ga('create', gaCodelab, 'auto', {name: 'codelab'});
+      }
+
+      var gaView;
+      var parts = location.search.substring(1).split('&');
+      for (var i = 0; i < parts.length; i++) {
+        var param = parts[i].split('=');
+        if (param[0] === 'viewga') {
+          gaView = param[1];
+          break;
+        }
+      }
+      if (gaView && gaView !== gaCodelab) {
+        ga('create', gaView, 'auto', {name: 'view'});
+      }
+    })();
+  </script>
+
+</body>
+</html>
