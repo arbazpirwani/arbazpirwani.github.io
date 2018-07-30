@@ -4,7 +4,10 @@ echo "UPLOAD STARTED!"
 
 set docId=%1
 set commitMessage=%2
+
 claat export %docId% -f
+
+cd..
 
 git add .
 
