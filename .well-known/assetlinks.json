@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.practice.flavours",
+    "sha256_cert_fingerprints":
+    ["1C:7A:2B:3B:2F:61:1A:47:62:08:07:16:64:0E:A6:B5:FA:91:A0:A2:FC:22:B3:16:59:F8:BD:D3:B4:9C:56:17"]
+  }
+}]
