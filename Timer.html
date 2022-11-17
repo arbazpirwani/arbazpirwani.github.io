@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Countdown - Countdown Timer</title>
+	<link href="circles.css" id="stylesheet" rel="stylesheet">
+	<style>
+		body {
+			font-family: sans-serif;
+			padding: 0px;
+			margin: 0px;
+		}
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		#light-thesssme{
+				}
+
+		
+		.flipdown.flipdown__theme-dark .rotor-group-heading:before {
+			color: #000000;
+		}
+		.days-before::before,.hours-before::before,.minutes-before::before,.seconds-before::before{
+			content: attr(data-before);
+			font-size: 1.9vw;
+			font-weight: 400;
+		}
+		.flipdown.flipdown__theme-dark .rotor,
+		.flipdown.flipdown__theme-dark .rotor-top,
+		.flipdown.flipdown__theme-dark .rotor-leaf-front,
+		.flipdown.flipdown__theme-dark .rotor-bottom,
+		.flipdown.flipdown__theme-dark .rotor-leaf-rear,.light-theme{
+			color: #ccc;
+			background-color: ;
+		}
+
+		/*circles style*/
+		.circle-green{stroke:  }
+		.js_lw_timer_show {fill: #ccc}
+		.text {color: }
+		.time_units {fill: #000000} /*replace with $_GET['tunits_color']*/
+	</style>
+
+
+</head>
+<body>
+
+
+
+<input type="hidden" id="js_style" value="circles.css">
+<input type="hidden" id="js_language" value="en">
+<input type="hidden" id="js_date" value="1668876420">
+<input type="hidden" id="js_tz" value="Asia/Karachi">
+<input type="hidden" id="js_uid" value="477986">
+
+	<div id="js_countdown_circle" style="visibility: visible;">
+		<div id="countdown">
+			<svg class="circles" id="circle_day" viewBox="42 52 115 115" xmlns="http://www.w3.org/2000/svg">
+				<g>
+					<circle r="40" cx="100" cy="100" fill="transparent"></circle>
+					<path fill="none" stroke-linecap="round" stroke-width="2" stroke="#ddd" stroke-dasharray="250,250" d="M100 60 A1 1 0 0 1 100 140 A1 1 0 0 1 100 60"></path>
+					<path class="circle-green" fill="none" stroke-linecap="round" stroke="#00ba52" stroke-dasharray="8.108480638073331,251.36289978027344" stroke-width="3" d="M100 60 A1 1 0 0 1 100 140 A1 1 0 0 1 100 60"></path>
+					<text class="js_lw_timer_show" text-anchor="middle" x="100" y="115" font-size="45px" font-weight="400" fill="#344154">01</text>
+				</g>
+				<g>
+					<text class="time_units" text-anchor="middle" x="100" y="165">Days</text>
+				</g>
+			</svg>
+
+			<svg class="circles" id="circle_hour" viewBox="42 52 115 115" xmlns="http://www.w3.org/2000/svg">
+				<g>
+					<circle r="40" cx="100" cy="100" fill="transparent"></circle>
+					<path fill="none" stroke-linecap="round" stroke-width="2" stroke="#ddd" stroke-dasharray="250,250" d="M100 60 A1 1 0 0 1 100 140 A1 1 0 0 1 100 60"></path>
+					<path class="circle-green" fill="none" stroke-linecap="round" stroke="#00ba52" stroke-dasharray="240.88944562276205,251.36289978027344" stroke-width="3" d="M100 60 A1 1 0 0 1 100 140 A1 1 0 0 1 100 60"></path>
+					<text class="js_lw_timer_show" text-anchor="middle" x="100" y="115" font-size="45px" font-weight="400" fill="#344154">23</text>
+				</g>
+				<g>
+					<text class="time_units" text-anchor="middle" x="100" y="165">Hours</text>
+				</g>
+			</svg>
+
+			<svg class="circles" id="circle_minute" viewBox="42 52 115 115" xmlns="http://www.w3.org/2000/svg">
+				<g>
+					<circle r="40" cx="100" cy="100" fill="transparent"></circle>
+					<path fill="none" stroke-linecap="round" stroke-width="2" stroke="#ddd" stroke-dasharray="250,250" d="M100 60 A1 1 0 0 1 100 140 A1 1 0 0 1 100 60"></path>
+					<path class="circle-green" fill="none" stroke-linecap="round" stroke="#00ba52" stroke-dasharray="234.60537312825522,251.36289978027344" stroke-width="3" d="M100 60 A1 1 0 0 1 100 140 A1 1 0 0 1 100 60"></path>
+					<text class="js_lw_timer_show" text-anchor="middle" x="100" y="115" font-size="45px" font-weight="400" fill="#344154">56</text>
+				</g>
+				<g>
+					<text class="time_units" text-anchor="middle" x="100" y="165">Minutes</text>
+				</g>
+			</svg>
+
+			<svg class="circles" id="circle_second" viewBox="42 52 115 115" xmlns="http://www.w3.org/2000/svg">
+				<g>
+					<circle r="40" cx="100" cy="100" fill="transparent"></circle>
+					<path fill="none" stroke-linecap="round" stroke-width="2" stroke="#ddd" stroke-dasharray="250,250" d="M100 60 A1 1 0 0 1 100 140 A1 1 0 0 1 100 60"></path>
+					<path class="circle-green" fill="none" stroke-linecap="round" stroke="#00ba52" stroke-dasharray="226.2266098022461,251.36289978027344" stroke-width="3" d="M100 60 A1 1 0 0 1 100 140 A1 1 0 0 1 100 60"></path>
+					<text class="js_lw_timer_show" text-anchor="middle" x="100" y="115" font-size="45px" font-weight="400" fill="#344154">55</text>
+				</g>
+				<g>
+					<text class="time_units" text-anchor="middle" x="100" y="165">Seconds</text>
+				</g>
+			</svg>
+		</div>
+	</div>
+
+	<script>
+		"use strict";
+		var width = 1000;
+		var height = width/3;
+
+		// send message to parent window
+		window.parent.postMessage(
+			{
+				event_id: 'time_countdown_size',
+				width: width,
+				height: height,
+				disable: '0',
+				uid: '477986'
+			},
+			"*"
+		);
+
+		// // IE,
+		// var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+		// var eventer = window[eventMethod];
+		// var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+		//
+		// // Listen
+		// eventer(messageEvent,function(event)
+		//     {
+		//         var btn = document.getElementById('js_countdown_circle');
+		//
+		//         if (event.data === 'button_over')
+		//         {
+		//             btn.classList.add('hover');
+		//         }
+		//
+		//         if (event.data === 'button_out')
+		//         {
+		//             btn.classList.remove('hover');
+		//         }
+		//     },
+		//     false);
+	</script>
+
+	<script src="circles.js"></script>
+
+
+</body></html>

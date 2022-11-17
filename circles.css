@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+}
+.circles .circle-green {
+    transition: stroke-dasharray 2.3s ease-out;
+}
+.circles .circle-green.complete {
+    transition: stroke-dasharray .6s ease-in-out;
+}
+#countdown {
+    text-align: center;
+}
+#countdown svg {
+    width: 22%;
+}
+.text {
+    text-align: center;
+    font-size: 2.5vw;
+    margin: 2vw 0;
+}
+.time_units {
+    font-size: 12px;
+}
